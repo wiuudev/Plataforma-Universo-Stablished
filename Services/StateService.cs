@@ -14,7 +14,7 @@ public class AppState
     public string WidthStyles { get; set; } = "fullwidth";              // fullwidth, boxed
     public string MenuPosition { get; set; } = "fixed";                 // fixed, scrollable
     public string HeaderPosition { get; set; } = "fixed";               // fixed, scrollable
-    public string MenuColor { get; set; } = "dark";                     // light, dark, color, gradient, transparent
+    public string MenuColor { get; set; } = "color";                     // light, dark, color, gradient, transparent
     public string HeaderColor { get; set; } = "light";                  // light, dark, color, gradient, transparent
     public string ThemePrimary { get; set; } = "";                      // '58, 88, 146', '92, 144, 163', '161, 90, 223', '78, 172, 76', '223, 90, 90'
     public string ThemeBackground { get; set; } = "";                   //make sure to add rgb valies like example :- '58, 88, 146' and also same for ThemeBackground1
@@ -455,7 +455,7 @@ public class StateService
         _currentState.WidthStyles = "fullwidth";              // fullwidth, boxed
         _currentState.MenuPosition = "fixed";                 // fixed, scrollable
         _currentState.HeaderPosition = "fixed";               // fixed, scrollable
-        _currentState.MenuColor = "dark";                     // light, dark, color, gradient, transparent
+        _currentState.MenuColor = "light";                     // light, dark, color, gradient, transparent
         _currentState.HeaderColor = "light";                  // light, dark, color, gradient, transparent
         _currentState.ThemePrimary = "";                      // '58, 88, 146', '92, 144, 163', '161, 90, 223', '78, 172, 76', '223, 90, 90'
         _currentState.ThemeBackground = "";

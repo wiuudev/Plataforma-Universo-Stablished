@@ -5,7 +5,7 @@ public class LandingMenuDataService
         new MainMenuItems (
             path: "landing/#home",
             type: "link",
-            title: "Home",
+            title: "Início",
             selected: false,
             active: false,
             dirChange: false
@@ -13,7 +13,7 @@ public class LandingMenuDataService
         new MainMenuItems (
             path: "landing/#about",
             type: "link",
-            title: "About",
+            title: "Sobre",
             selected: false,
             active: false,
             dirChange: false
@@ -21,7 +21,7 @@ public class LandingMenuDataService
         
         new MainMenuItems (
             type: "sub",
-            title: "More",
+            title: "Mais",
             selected: false,
             active: false,
             dirChange: false,
@@ -30,7 +30,7 @@ public class LandingMenuDataService
                 new MainMenuItems (
                     path: "landing/#statistics",
                     type: "link",
-                    title: "Statistics",
+                    title: "Estatísticas",
                     selected: false,
                     active: false,
                     dirChange: false
@@ -38,7 +38,7 @@ public class LandingMenuDataService
                 new MainMenuItems (
                     path: "landing/#our-mission",
                     type: "link",
-                    title: "Our Mission",
+                    title: "Nossa missão",
                     selected: false,
                     active: false,
                     dirChange: false
@@ -46,7 +46,7 @@ public class LandingMenuDataService
                 new MainMenuItems (
                     path: "landing/#features",
                     type: "link",
-                    title: "Features",
+                    title: "Benefícios",
                     selected: false,
                     active: false,
                     dirChange: false
@@ -54,62 +54,18 @@ public class LandingMenuDataService
                 new MainMenuItems (
                     path: "landing/#testimonials",
                     type: "link",
-                    title: "Testimonials",
+                    title: "Depoimentos",
                     selected: false,
                     active: false,
                     dirChange: false
                 ),
-                new MainMenuItems (
-                    type: "sub",
-                    title: "Level-2",
-                    selected: false,
-                    active: false,
-                    dirChange: false,
-                    children: new MainMenuItems[]
-                    {
-                        new MainMenuItems (
-                            path: "",
-                            type: "empty",
-                            title: "Level-2-1",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            type: "sub",
-                            title: "Level-2-2",
-                            selected: false,
-                            active: false,
-                            dirChange: false,
-                            children: new MainMenuItems[]
-                            {
-                                new MainMenuItems (
-                                    path: "",
-                                    type: "empty",
-                                    title: "Level-2-2-1",
-                                    selected: false,
-                                    active: false,
-                                    dirChange: false
-                                ),
-                                new MainMenuItems (
-                                    path: "",
-                                    type: "empty",
-                                    title: "Level-2-2-2",
-                                    selected: false,
-                                    active: false,
-                                    dirChange: false
-                                )
-                            }
-                        )
-                    }
-                )
             }
         ),
         
         new MainMenuItems (
             path: "landing/#testimonials",
             type: "link",
-            title: "Clients",
+            title: "Clientes",
             selected: false,
             active: false,
             dirChange: false
@@ -117,7 +73,7 @@ public class LandingMenuDataService
         new MainMenuItems (
             path: "landing/#team",
             type: "link",
-            title: "Team",
+            title: "Equipe",
             selected: false,
             active: false,
             dirChange: false
@@ -125,7 +81,7 @@ public class LandingMenuDataService
         new MainMenuItems (
             path: "landing/#pricing",
             type: "link",
-            title: "Pricing",
+            title: "Preço",
             selected: false,
             active: false,
             dirChange: false
@@ -133,7 +89,7 @@ public class LandingMenuDataService
         new MainMenuItems (
             path: "landing/#faq",
             type: "link",
-            title: "Faq's",
+            title: "Perguntas frequentes",
             selected: false,
             active: false,
             dirChange: false
@@ -141,7 +97,7 @@ public class LandingMenuDataService
         new MainMenuItems (
             path: "landing/#contact",
             type: "link",
-            title: "Contact",
+            title: "Contato",
             selected: false,
             active: false,
             dirChange: false

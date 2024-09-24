@@ -1,5 +1,5 @@
 {
-  "name": "ynex",
+  "name": "unigestor",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "ynex": "node esbuild.config.js"
   },
-  "author": "spruko technology",
+  "author": "William Rodrigues",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.19",

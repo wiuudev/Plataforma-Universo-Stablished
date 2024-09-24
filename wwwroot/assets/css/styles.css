@@ -9,9 +9,9 @@
     241,
     247;
   --primary-rgb:
-    132,
-    90,
-    223;
+    13,
+    110,
+    253;
   --secondary-rgb:
     35,
     183,
@@ -667,8 +667,8 @@
   }
 }
 [data-menu-styles=dark][data-theme-mode=light] {
-  --menu-bg: #111c43;
-  --menu-prime-color: #a3aed1;
+    --menu-bg: #1e72ef;
+    --menu-prime-color: #ffffff;
 }
 [data-menu-styles=color] {
   --menu-bg: var(--primary-color);
@@ -30470,7 +30470,7 @@ html[data-toggled=open] #responsive-overlay {
   color: var(--default-text-color);
 }
 .offer-promotion .offer-details {
-  position: absolulte;
+  position: 4absolulte;
   border: 1px dashed rgb(var(--warning-rgb));
   padding: 0.25rem 0.5rem;
   border-radius: 0.5rem;
