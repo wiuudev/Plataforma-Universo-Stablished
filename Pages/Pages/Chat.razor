@@ -22,7 +22,7 @@
                         </div>
                         <div class="chat-search p-3 border-bottom">
                             <div class="input-group">
-                                <input type="text" class="form-control bg-light border-0" placeholder="Search Chat"
+                                <input type="text" class="form-control bg-light border-0" placeholder="Procurar contato"
                                     aria-describedby="button-addon2">
                                 <button aria-label="button" class="btn btn-light" type="button" id="button-addon2"><i
                                         class="ri-search-line text-muted"></i></button>
@@ -222,50 +222,6 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                            </ul>
-                                            <ul class="list-unstyled mb-0 mt-2 ">
-                                                <li class="pb-0">
-                                                    <p class="text-muted fs-11 fw-semibold mb-1 op-7">GROUP CHATS</p>
-                                                </li>
-                                                @foreach (var ChatList in GroupData)
-                                                {
-                                                    <li  @onclick="@(() => ShowChat(ChatList))" class="@(ChatList.seen ? "chat-msg-unread" : "") checkforactive">
-                                                        <a href="javascript:void(0);">
-                                                            <div class="d-flex align-items-top">
-                                                                <div class="me-1 lh-1">
-                                                                    <span class="avatar avatar-md me-2 avatar-rounded @(ChatList.isOnline ? "online" : "offline")">
-                                                                        <img src="@ChatList.img" alt="img" />
-                                                                    </span>
-                                                                </div>
-                                                                <div class="flex-fill">
-                                                                    <p class="mb-0 fw-semibold">
-                                                                        @((MarkupString)(ChatList.name ?? "name")) <span class="float-end text-muted fw-normal fs-11">@ChatList.lastMessageTime</span>
-                                                                    </p>
-                                                                    <p class="fs-12 mb-0 @(ChatList.isTyping ? "chat-msg-typing" : "")">
-                                                                        <span class="chat-msg text-truncate">
-                                                                            @if(!string.IsNullOrEmpty(ChatList.lastMsg))
-                                                                            {
-                                                                                @($"{ChatList.whoslastMsg} : {ChatList.lastMsg}")
-                                                                            }
-                                                                            else
-                                                                            {
-                                                                                @($"{ChatList.howisTyping} Typing...")
-                                                                            }
-                                                                        </span>
-                                                                        @if (ChatList.allSeen)
-                                                                        {
-                                                                            <span class="chat-read-icon float-end align-middle"><i class="ri-check-double-fill"></i></span>
-                                                                        }
-                                                                        @if (int.TryParse(ChatList.unReadMessages, out int unReadMessages) && unReadMessages > 0)
-                                                                        {
-                                                                            <span class="badge bg-success-transparent rounded-circle float-end">@unReadMessages</span>
-                                                                        }
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                }
                                             </ul>
                                         </div>
                                     </BlazorOverlayScrollbarsContent>
@@ -554,7 +510,7 @@
                             </div>
                             <div class="flex-fill">
                                 <p class="mb-0 fw-semibold fs-14">
-                                    <a href="javascript:void(0);" class="chatnameperson responsive-userinfo-open" @onclick="ShowChatUser">@((MarkupString)(ActiveUser?.name ?? "name"))</a>
+                                    <a href="javascript:void(0);" class="chatnameperson responsive-userinfo-open" @onclick="ShowChatUser">@((MarkupString)(ActiveUser?.name ?? "Nome"))</a>
                                 </p>
                                 <p class="text-muted mb-0 chatpersonstatus">@(ActiveUser?.isOnline == true ? "online" : "offline")</p>
                             </div>
@@ -601,11 +557,11 @@
                                                 </div>
                                                 <div class="ms-3">
                                                     <span class="chatting-user-info">
-                                                        <span class="chatnameperson">@((MarkupString)(ActiveUser?.name ?? "name"))</span> <span class="msg-sent-time">11:48PM</span>
+                                                        <span class="chatnameperson">@((MarkupString)(ActiveUser?.name ?? "nome"))</span> <span class="msg-sent-time">11:48PM</span>
                                                     </span>
                                                     <div class="main-chat-msg">
                                                         <div>
-                                                            <p class="mb-0">Nice to meet you &#128512;</p>
+                                                            <p class="mb-0"> lskhglsdkhglhksdlkhg&#128512;</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -616,13 +572,11 @@
                                                 <div class="me-3">
                                                     <span class="chatting-user-info">
                                                         <span class="msg-sent-time"><span class="chat-read-mark align-middle d-inline-flex"><i
-                                                                    class="ri-check-double-line"></i></span>11:50PM</span> You
+                                                                    class="ri-check-double-line"></i></span>11:50PM</span> Você
                                                     </span>
                                                     <div class="main-chat-msg">
                                                         <div>
-                                                            <p class="mb-0">It is a long established fact that a reader will be
-                                                                distracted by the readable content of a page when looking at its
-                                                                layout</p>
+                                                            <p class="mb-0">lkçsdghldkshflkhslkfd</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -646,10 +600,10 @@
                                                     </span>
                                                     <div class="main-chat-msg">
                                                         <div>
-                                                            <p class="mb-0">Who are you ?</p>
+                                                            <p class="mb-0">lkshdglkhsdlgkhsd</p>
                                                         </div>
                                                         <div>
-                                                            <p class="mb-0">I don't know anyone named jeremiah.</p>
+                                                            <p class="mb-0">açfjçaflkahslkfsa</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -664,7 +618,7 @@
                                                     </span>
                                                     <div class="main-chat-msg">
                                                         <div>
-                                                            <p class="mb-0">Some of the recent images taken are nice &#128076;</p>
+                                                            <p class="mb-0">ldghldshglkshhgklsd &#128076;</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -688,7 +642,7 @@
                                                     </span>
                                                     <div class="main-chat-msg">
                                                         <div>
-                                                            <p class="mb-0">Here are some of them have a look</p>
+                                                            <p class="mb-0">alkhfalkhflkhas</p>
                                                         </div>
                                                         <div>
                                                             <p class="mb-0 d-sm-flex d-block">
@@ -855,11 +809,11 @@
                                                 </div>
                                                 <div class="ms-3">
                                                     <span class="chatting-user-info chatnameperson">
-                                                        @((MarkupString)(ActiveUser?.name ?? "name")) <span class="msg-sent-time">11:45PM</span>
+                                                        @((MarkupString)(ActiveUser?.name ?? "Nome")) <span class="msg-sent-time">11:45PM</span>
                                                     </span>
                                                     <div class="main-chat-msg">
                                                         <div>
-                                                            <p class="mb-0">Happy to talk with you,chat you later &#128075;</p>
+                                                            <p class="mb-0">ajglakhflakhflashf &#128075;</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -890,7 +844,7 @@
                                         <span class="avatar avatar-rounded @(ActiveUser?.isOnline == true ? "online" : "offline") avatar-xxl me-2 mb-3 chatstatusperson">
                                             <img class="chatimageperson" src="@ActiveUser?.img" alt="img">
                                         </span>
-                                        <p class="mb-1 fs-15 fw-semibold text-dark lh-1 chatnameperson">@((MarkupString)(ActiveUser?.name ?? "Name"))</p>
+                                        <p class="mb-1 fs-15 fw-semibold text-dark lh-1 chatnameperson">@((MarkupString)(ActiveUser?.name ?? "Nome"))</p>
                                         <p class="fs-12 text-muted"><span class="chatnameperson">@ActiveUser?.email</span></p>
                                         <p class="text-center mb-0">
                                             <button type="button" aria-label="button" class="btn btn-icon rounded-pill btn-primary-light"><i
@@ -902,7 +856,7 @@
                                         </p>
                                     </div>
                                     <div class="mb-5">
-                                        <div class="fw-semibold mb-4">Shared Files
+                                        <div class="fw-semibold mb-4">Mídia
                                             <span class="badge bg-primary-transparent rounded-circle ms-1">4</span>
                                             <span class="float-end fs-11"><a href="javascript:void(0);" class="link-primary text-underline"><u>View All</u></a></span>
                                         </div>
@@ -915,7 +869,7 @@
                                                         </span>
                                                     </div>
                                                     <div class="flex-fill">
-                                                        <p class="fs-12 fw-semibold mb-0">Project Details.pdf</p>
+                                                        <p class="fs-12 fw-semibold mb-0">5S.pdf</p>
                                                         <p class="mb-0 text-muted fs-11">24,Oct 2022 - 14:24PM</p>
                                                     </div>
                                                     <div class="fs-18">
@@ -1052,46 +1006,34 @@
         public bool allSeen { get; set; }
         
     }
+
     List<ChatList> AllChats = new List<ChatList>()
     {
-        new ChatList {
-            id= 5, img= "../assets/images/faces/11.jpg", email= "andreas@mail.com", name= "Andreas", lastMsg= "Congratulations on your new project", isOnline= false, isTyping= false, seen= false, unReadMessages= "", lastMessageTime= "11:54AM"
+        new ChatList
+        {
+            id = 5, img = "../assets/images/faces/11.jpg", email = "andreas@mail.com", name = "Nome do Contato", lastMsg = "Descrição ultima mensagem", isOnline = false, isTyping = false, seen = false, unReadMessages = "", lastMessageTime = "11:54AM"
         },
-        new ChatList {
-            id= 6, img= "../assets/images/faces/3.jpg", email= "melissasean@mail.com", name= "Melissa Sean", lastMsg= "Nice work,Congrats &#128079;", isOnline= false, isTyping= false, seen= false, unReadMessages= "", lastMessageTime= "9:45AM"
+        new ChatList
+        {
+            id = 6, img = "../assets/images/faces/3.jpg", email = "melissasean@mail.com", name = "Nome do Contato", lastMsg = "Descrição ultima mensagem", isOnline = false, isTyping = false, seen = false, unReadMessages = "", lastMessageTime = "9:45AM"
         },
-        new ChatList {
-            id= 7, img= "../assets/images/faces/6.jpg", email= "samanthaPaul@mail.com", name= "Samantha Paul", lastMsg= "Great work keep it up =-)", isOnline= false, isTyping= false, seen= false, unReadMessages= "", lastMessageTime= "8:31AM"
+        new ChatList
+        {
+            id = 7, img = "../assets/images/faces/6.jpg", email = "samanthaPaul@mail.com", name = "Nome do Contato", lastMsg = "Descrição ultima mensagem", isOnline = false, isTyping = false, seen = false, unReadMessages = "", lastMessageTime = "8:31AM"
         },
-        new ChatList {
-            id= 8, img= "../assets/images/faces/4.jpg", email= "meganFox@mail.com", name= "Megan Fox", lastMsg= "You are need to be appreaciated for what you have done,congs", isOnline= false, isTyping= false, seen= false, unReadMessages= "", lastMessageTime= "7:23AM"
+        new ChatList
+        {
+            id = 8, img = "../assets/images/faces/4.jpg", email = "meganFox@mail.com", name = "Nome do Contato", lastMsg = "Descrição ultima mensagem", isOnline = false, isTyping = false, seen = false, unReadMessages = "", lastMessageTime = "7:23AM"
         },
-        new ChatList {
-            id= 9, img= "../assets/images/faces/13.jpg", email= "nicholassams@mail.com", name= "Nicholas Sams", lastMsg= "Great Project", isOnline= false, isTyping= false, seen= false, unReadMessages= "", lastMessageTime= "10:22AM"
+        new ChatList
+        {
+            id = 9, img = "../assets/images/faces/13.jpg", email = "nicholassams@mail.com", name = "Nome do Contato", lastMsg = "Descrição ultima mensagem", isOnline = false, isTyping = false, seen = false, unReadMessages = "", lastMessageTime = "10:22AM"
         },
-        new ChatList {
-            id= 10, img= "../assets/images/faces/15.jpg", email= "popeJohnson@mail.com", name= "Pope Johnson", lastMsg= "Hike management fixed", isOnline= false, isTyping= false, seen= false, unReadMessages= "", lastMessageTime= "9:10AM"
-        },
-        };
-    List<ChatList> GroupData = new List<ChatList>()
-    {
-        new ChatList {
-            id= 1, img= "../assets/images/faces/17.jpg", email= "familyTogether@mail.com", name= "Family Together &#128525; ", whoslastMsg= "", lastMsg= "", isOnline= true, isTyping= true, howisTyping= "Hira", allSeen= false, unReadMessages= "2", lastMessageTime= "12:24PM"
-        },
-        new ChatList {
-            id= 2, img= "../assets/images/faces/18.jpg", email= "workBuddies@mail.com", name= "Work Buddies", whoslastMsg= "Ramas", lastMsg= "Happy to be part of this group", isOnline= true, isTyping= false, howisTyping= "", allSeen= true, unReadMessages= "", lastMessageTime= "1:16PM"
-        },
-        new ChatList {
-            id= 3, img= "../assets/images/faces/19.jpg", email= "friendsForever@mail.com", name= "Friends Forever &#128526; ", whoslastMsg= "Simon", lastMsg= "Simon, Melissa, Amanda, Patrick, Siddique", isOnline= false, isTyping= false, howisTyping= "", allSeen= false, unReadMessages= "", lastMessageTime= "3 days ago"
-        },
-        new ChatList {
-            id= 4, img= "../assets/images/faces/20.jpg", email= "socialMedia@mail.com", name= "Social Media Deals", whoslastMsg= "Subha", lastMsg= "Kamalan, Subha, Ambrose, Kiara, Jackson", isOnline= false, isTyping= false, howisTyping= "", allSeen= false, unReadMessages= "", lastMessageTime= "5 days ago"
-        },
-        new ChatList {
-            id= 5, img= "../assets/images/faces/21.jpg", email= "apartmentGroup@mail.com", name= "Apartment Group", whoslastMsg= "Alexa", lastMsg= "Subman, Rajen, Kairo, Dibasha, Alexa", isOnline= false, isTyping= false, howisTyping= "", allSeen= false, unReadMessages= "", lastMessageTime= "12 days ago"
+        new ChatList
+        {
+            id = 10, img = "../assets/images/faces/15.jpg", email = "popeJohnson@mail.com", name = "Nome do Contato", lastMsg = "Descrição ultima mensagem", isOnline = false, isTyping = false, seen = false, unReadMessages = "", lastMessageTime = "9:10AM"
         },
     };
-    
     
     ChatList? ActiveUser { get; set; }
     string chatUserDetailsRef = "";

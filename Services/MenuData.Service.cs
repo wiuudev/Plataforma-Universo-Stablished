@@ -3,126 +3,25 @@ public class MenuDataService
     private List<MainMenuItems> MenuData = new List<MainMenuItems>()
     {
         new MainMenuItems(
-            menuTitle: "MAIN"
+            menuTitle: "Início"
         ),
         new MainMenuItems(
-            type: "sub",
-            title: "Dashboards",
+            type: "link",
+            path: "/home",
+            title: "Dashboard",
             icon: "bx bx-home",
-            badgeValue: "12",
             badgeClass: "bg-warning-transparent",
             selected: false,
-            active: false,
-            dirChange: false,
-            children: new MainMenuItems[]
-            {
-              new MainMenuItems (
-                    path: "/home",
-                    type: "link",
-                    title: "CRM",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-              new MainMenuItems (
-                    path: "/index2",
-                    type: "link",
-                    title: "Ecommerce",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-              new MainMenuItems (
-                    path: "/index3",
-                    type: "link",
-                    title: "Crypto",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-              new MainMenuItems (
-                    path: "/index4",
-                    type: "link",
-                    title: "Jobs",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-              new MainMenuItems (
-                    path: "/index5",
-                    type: "link",
-                    title: "NFT",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-              new MainMenuItems (
-                    path: "/index6",
-                    type: "link",
-                    title: "Sales",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-              new MainMenuItems (
-                    path: "/index7",
-                    type: "link",
-                    title: "Analytics",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-              new MainMenuItems (
-                    path: "/index8",
-                    type: "link",
-                    title: "Projects",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-              new MainMenuItems (
-                    path: "/index9",
-                    type: "link",
-                    title: "HRM",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-              new MainMenuItems (
-                    path: "/index10",
-                    type: "link",
-                    title: "Stocks",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-              new MainMenuItems (
-                    path: "/index11",
-                    type: "link",
-                    title: "Courses",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-               new MainMenuItems (
-                    path: "/index12",
-                    type: "link",
-                    title: "Personal",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-            }
+            active: true,
+            dirChange: false
         ),
         new MainMenuItems(
-            menuTitle: "PAGES"
+            menuTitle: "ATALHOS DE PÁGINAS"
         ),
         new MainMenuItems(
             type: "sub",
-            title: "Pages",
+            title: "Páginas",
             icon: "bx bx-file-blank",
-            badgeValue: "New",
-            badgeClass: "bg-secondary-transparent",
             selected: false,
             active: false,
             dirChange: false,
@@ -131,52 +30,10 @@ public class MenuDataService
                 new MainMenuItems (
                     path: "/about-us",
                     type: "link",
-                    title: "About Us",
+                    title: "Sobre",
                     selected: false,
                     active: false,
                     dirChange: false
-                ),
-                new MainMenuItems (
-                    path: "/counter",
-                    type: "link",
-                    title: "Counters",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-                new MainMenuItems (
-                    type: "sub",
-                    title: "Blog",
-                    selected: false,
-                    active: false,
-                    dirChange: false,
-                    children: new MainMenuItems[]
-                    {
-                    new MainMenuItems (
-                        path: "/blog",
-                        type: "link",
-                        title: "Blog",
-                        selected: false,
-                        active: false,
-                        dirChange: false
-                    ),
-                    new MainMenuItems (
-                        path: "/blog-details",
-                        type: "link",
-                        title: "Blog Details",
-                        selected: false,
-                        active: false,
-                        dirChange: false
-                    ),
-                    new MainMenuItems (
-                        path: "/blog-create",
-                        type: "link",
-                        title: "Create Blog",
-                        selected: false,
-                        active: false,
-                        dirChange: false
-                    ),
-                    }
                 ),
                 new MainMenuItems (
                     path: "/chat",
@@ -189,7 +46,7 @@ public class MenuDataService
                 new MainMenuItems (
                     path: "/contacts",
                     type: "link",
-                    title: "Contacts",
+                    title: "Contatos",
                     selected: false,
                     active: false,
                     dirChange: false
@@ -197,35 +54,19 @@ public class MenuDataService
                 new MainMenuItems (
                     path: "/contact-us",
                     type: "link",
-                    title: "Contact Us",
+                    title: "Contate-nos",
                     selected: false,
                     active: false,
                     dirChange: false
                 ),
                 new MainMenuItems (
                 type: "sub",
-                title: "Ecommerce",
+                title: "Compras",
                 selected: false,
                 active: false,
                 dirChange: false,
                 children: new MainMenuItems[]
                 {
-                  new MainMenuItems (
-                    path: "/add-products",
-                    type: "link",
-                    title: "Add Products",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                  ),
-                  new MainMenuItems (
-                    path: "/cart",
-                    type: "link",
-                    title: "Cart",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                  ),
                   new MainMenuItems (
                     path: "/checkout",
                     type: "link",
@@ -234,172 +75,29 @@ public class MenuDataService
                     active: false,
                     dirChange: false
                   ),
-                  new MainMenuItems (
-                    path: "/edit-products",
-                    type: "link",
-                    title: "Edit Products",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                  ),
-                  new MainMenuItems (
-                    path: "/order-details",
-                    type: "link",
-                    title: "Order Details",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                  ),
-                  new MainMenuItems (
-                    path: "/orders",
-                    type: "link",
-                    title: "Orders",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                  ),
-                  new MainMenuItems (
-                    path: "/products",
-                    type: "link",
-                    title: "Products",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                  ),
-                  new MainMenuItems (
-                    path: "/product-details",
-                    type: "link",
-                    title: "Product Details",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                  ),
-                  new MainMenuItems (
-                    path: "/products-list",
-                    type: "link",
-                    title: "Products List",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                  ),
-                  new MainMenuItems (
-                    path: "/wishlist",
-                    type: "link",
-                    title: "Wishlist",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                  ),
                 }
             ),
-                new MainMenuItems (
-                    type: "sub",
-                    title: "Email",
-                    selected: false,
-                    active: false,
-                    dirChange: false,
-                    children: new MainMenuItems[]
-                    {
-                        new MainMenuItems (
-                            path: "/mail",
-                            type: "link",
-                            title: "Mail App",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/mail-settings",
-                            type: "link",
-                            title: "Mail Settings",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                    }
-                ),
-                new MainMenuItems (
-                    path: "/empty",
-                    type: "link",
-                    title: "Empty",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
+       
                 new MainMenuItems (
                     path: "/faq's",
                     type: "link",
-                    title: "FAQ's",
+                    title: "Perguntas frequentes",
                     selected: false,
                     active: false,
                     dirChange: false
                 ),
                 new MainMenuItems (
-                    type: "sub",
-                    title: "File Manager",
+                    type: "link",
+                    path: "/file-manager",
+                    title: "Arquivos",
                     selected: false,
                     active: false,
-                    dirChange: false,
-                    children: new MainMenuItems[]
-                    {
-                        new MainMenuItems (
-                            path: "/file-manager",
-                            type: "link",
-                            title: "File Manager",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                    }
-                ),
-                new MainMenuItems (
-                    type: "sub",
-                    title: "Invoice",
-                    selected: false,
-                    active: false,
-                    dirChange: false,
-                    children: new MainMenuItems[]
-                    {
-                        new MainMenuItems (
-                            path: "/invoice-create",
-                            type: "link",
-                            title: "Create Invoice",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/invoice-details",
-                            type: "link",
-                            title: "Invoice Details",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/invoice-list",
-                            type: "link",
-                            title: "Invoice List",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                    }
+                    dirChange: false
                 ),
                 new MainMenuItems (
                     path: "/landing",
                     type: "external",
-                    title: "Landing",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-                new MainMenuItems (
-                    path: "/landing-jobs",
-                    type: "external",
-                    title: "Jobs Landing",
-                    badgeValue: "New",
-                    badgeClass: "bg-secondary-transparent",
+                    title: "Página inicial",
                     selected: false,
                     active: false,
                     dirChange: false
@@ -407,15 +105,7 @@ public class MenuDataService
                 new MainMenuItems (
                     path: "/notifications",
                     type: "link",
-                    title: "Notifications",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-                new MainMenuItems (
-                    path: "/pricing",
-                    type: "link",
-                    title: "Pricing",
+                    title: "Notificações",
                     selected: false,
                     active: false,
                     dirChange: false
@@ -423,23 +113,7 @@ public class MenuDataService
                 new MainMenuItems (
                     path: "/profile",
                     type: "link",
-                    title: "Profile",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-                new MainMenuItems (
-                    path: "/reviews",
-                    type: "link",
-                    title: "Reviews",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-                new MainMenuItems (
-                    path: "/team",
-                    type: "link",
-                    title: "Team",
+                    title: "Perfil",
                     selected: false,
                     active: false,
                     dirChange: false
@@ -447,7 +121,7 @@ public class MenuDataService
                 new MainMenuItems (
                     path: "/terms_conditions",
                     type: "link",
-                    title: "Terms&Conditions",
+                    title: "Termos e condições",
                     selected: false,
                     active: false,
                     dirChange: false
@@ -455,15 +129,7 @@ public class MenuDataService
                 new MainMenuItems (
                     path: "/timeline",
                     type: "link",
-                    title: "Timeline",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-                new MainMenuItems (
-                    path: "/to-do-list",
-                    type: "link",
-                    title: "To Do List",
+                    title: "Linha do tempo",
                     selected: false,
                     active: false,
                     dirChange: false
@@ -471,45 +137,19 @@ public class MenuDataService
             }
         ),
         new MainMenuItems (
-            type: "sub",
-            title: "Task",
+            type: "link",
+            title: "Tarefas",
+            path: "/task-kanban-board",
             icon: "bx bx-task",
-            badgeValue: "New",
+            badgeValue: "Novas",
             badgeClass: "bg-secondary-transparent",
             selected: false,
             active: false,
-            dirChange: false,
-            children: new MainMenuItems[]
-            {
-                new MainMenuItems ( 
-                    path: "/task-kanban-board",
-                    type: "link",
-                    title: "Kanban Board",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-                new MainMenuItems (
-                    path: "/task-list-view",
-                    type: "link",
-                    title: "List View",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-                new MainMenuItems (
-                    path: "/task-details",
-                    type: "link",
-                    title: "Task Details",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-            }
+            dirChange: false
         ),
         new MainMenuItems (
             type: "sub",
-            title: "Authentication",
+            title: "Autenticação",
             icon: "bx bx-fingerprint",
             selected: false,
             active: false,
@@ -519,171 +159,47 @@ public class MenuDataService
                 new MainMenuItems ( 
                     path: "/coming-soon",
                     type: "link",
-                    title: "Coming Soon",
+                    title: "Em breve",
                     selected: false,
                     active: false,
                     dirChange: false
                 ),
                 new MainMenuItems ( 
-                    type: "sub",
-                    title: "Create Password",
+                    type: "link",
+                    title: "Criar senha",
+                    path: "/create-password-basic",
                     selected: false,
                     active: false,
-                    dirChange: false,
-                    children: new MainMenuItems[]
-                    {
-                        new MainMenuItems ( 
-                            path: "/create-password-basic",
-                            type: "link",
-                            title: "Basic",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems ( 
-                            path: "/create-password-cover",
-                            type: "link",
-                            title: "Cover",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                    }
+                    dirChange: false
                 ),
                 new MainMenuItems ( 
-                    type: "sub",
-                    title: "Lock Screen",
+                    type: "link",
+                    path: "/reset-password-basic",
+                    title: "Redefinir senha",
                     selected: false,
                     active: false,
-                    dirChange: false,
-                    children: new MainMenuItems[]
-                    {
-                        new MainMenuItems ( 
-                            path: "/lockscreen-basic",
-                            type: "link",
-                            title: "Basic",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems ( 
-                            path: "/lockscreen-cover",
-                            type: "link",
-                            title: "Cover",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                    }
+                    dirChange: false
                 ),
                 new MainMenuItems ( 
-                    type: "sub",
-                    title: "Reset Password",
+                    type: "link",
+                    path: "/sign-up-basic",
+                    title: "Cadastro",
                     selected: false,
                     active: false,
-                    dirChange: false,
-                    children: new MainMenuItems[]
-                    {
-                        new MainMenuItems ( 
-                            path: "/reset-password-basic",
-                            type: "link",
-                            title: "Basic",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems ( 
-                            path: "/reset-password-cover",
-                            type: "link",
-                            title: "Cover",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                    }
+                    dirChange: false
                 ),
                 new MainMenuItems ( 
-                    type: "sub",
-                    title: "Sign Up",
+                    type: "link",
+                    title: "Entrar",
+                    path: "/sign-in-basic",
                     selected: false,
                     active: false,
-                    dirChange: false,
-                    children: new MainMenuItems[]
-                    {
-                        new MainMenuItems ( 
-                            path: "/sign-up-basic",
-                            type: "link",
-                            title: "Basic",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems ( 
-                            path: "/sign-up-cover",
-                            type: "link",
-                            title: "Cover",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                    }
-                ),
-                new MainMenuItems ( 
-                    type: "sub",
-                    title: "Sign In",
-                    selected: false,
-                    active: false,
-                    dirChange: false,
-                    children: new MainMenuItems[]
-                    {
-                        new MainMenuItems ( 
-                            path: "/sign-in-basic",
-                            type: "link",
-                            title: "Basic",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems ( 
-                            path: "/sign-in-cover",
-                            type: "link",
-                            title: "Cover",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                    }
-                ),
-                new MainMenuItems ( 
-                    type: "sub",
-                    title: "Two Step Verification",
-                    selected: false,
-                    active: false,
-                    dirChange: false,
-                    children: new MainMenuItems[]
-                    {
-                        new MainMenuItems ( 
-                            path: "/two-step-verification-basic",
-                            type: "link",
-                            title: "Basic",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems ( 
-                            path: "/two-step-verification-cover",
-                            type: "link",
-                            title: "Cover",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                    }
+                    dirChange: false
                 ),
                 new MainMenuItems ( 
                     path: "/under-maintenance",
                     type: "link",
-                    title: "Under Maintenance",
+                    title: "Em manutenção",
                     selected: false,
                     active: false,
                     dirChange: false
@@ -692,7 +208,7 @@ public class MenuDataService
         ),
         new MainMenuItems (
             type: "sub",
-            title: "Error",
+            title: "Erros",
             icon: "bx bx-error",
             selected: false,
             active: false,
@@ -702,7 +218,7 @@ public class MenuDataService
                 new MainMenuItems (
                     path: "/401-error",
                     type: "link",
-                    title: "Error 401",
+                    title: "Erro 401",
                     selected: false,
                     active: false,
                     dirChange: false
@@ -710,7 +226,7 @@ public class MenuDataService
                 new MainMenuItems (
                     path: "/404-error",
                     type: "link",
-                    title: "Error 404",
+                    title: "Erro 404",
                     selected: false,
                     active: false,
                     dirChange: false
@@ -718,13 +234,14 @@ public class MenuDataService
                 new MainMenuItems (
                     path: "/500-error",
                     type: "link",
-                    title: "Error 500",
+                    title: "Erro 500",
                     selected: false,
                     active: false,
                     dirChange: false
                 ),
             }
         ),
+        /*
         new MainMenuItems (
             menuTitle: "GENERAL"
         ),
@@ -1252,643 +769,8 @@ public class MenuDataService
             selected: false,
             active: false,
             dirChange: false
-        ),
-        new MainMenuItems (
-            menuTitle: "WEB APPS"
-        ),
-        new MainMenuItems (
-            type: "sub",
-            title: "Apps",
-            icon: "bx bx-grid-alt",
-            badgeValue: "New",
-            badgeClass: "bg-secondary-transparent",
-            selected: false,
-            active: false,
-            dirChange: false,
-            children: new MainMenuItems[]
-            {
-                new MainMenuItems (
-                    type: "sub",
-                    title: "Calendar",
-                    badgeValue: "",
-                    badgeClass: "",
-                    selected: false,
-                    active: false,
-                    dirChange: false,
-                    children: new MainMenuItems[]
-                    {
-                        new MainMenuItems (
-                            path: "/full-calendar",
-                            type: "link",
-                            title: "Full Calendar",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/blazor-calendar",
-                            type: "link",
-                            title: "Blazor Calendar",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                    }
-                ),
-                new MainMenuItems (
-                    path: "/gallery",
-                    type: "link",
-                    title: "Gallery",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-                new MainMenuItems (
-                    path: "/sweet_alerts",
-                    type: "link",
-                    title: "Sweet Alerts",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-                new MainMenuItems (
-                    type: "sub",
-                    title: "Projects",
-                    badgeValue: "New",
-                    badgeClass: "bg-secondary-transparent",
-                    selected: false,
-                    active: false,
-                    dirChange: false,
-                    children: new MainMenuItems[]
-                    {
-                        new MainMenuItems (
-                            path: "/projects-list",
-                            type: "link",
-                            title: "Projects List",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/projects-overview",
-                            type: "link",
-                            title: "Project Overview",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/projects-create",
-                            type: "link",
-                            title: "Create Project",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                    }
-                ),
-                new MainMenuItems (
-                    type: "sub",
-                    title: "Jobs",
-                    badgeValue: "New",
-                    badgeClass: "bg-secondary-transparent",
-                    selected: false,
-                    active: false,
-                    dirChange: false,
-                    children: new MainMenuItems[]
-                    {
-                        new MainMenuItems (
-                            path: "/job-details",
-                            type: "link",
-                            title: "Job Details",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/job-company-search",
-                            type: "link",
-                            title: "Search Company",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/job-search",
-                            type: "link",
-                            title: "Search Jobs",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/job-post",
-                            type: "link",
-                            title: "Job Post",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/jobs-list",
-                            type: "link",
-                            title: "Jobs List",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/job-candidate-search",
-                            type: "link",
-                            title: "Search Candidate",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/job-candidate-details",
-                            type: "link",
-                            title: "Candidate-details",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                    }
-                ),
-                new MainMenuItems (
-                    type: "sub",
-                    title: "NFT",
-                    badgeValue: "New",
-                    badgeClass: "bg-secondary-transparent",
-                    selected: false,
-                    active: false,
-                    dirChange: false,
-                    children: new MainMenuItems[]
-                    {
-                        new MainMenuItems (
-                            path: "/nft-marketplace",
-                            type: "link",
-                            title: "Market Place",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/nft-details",
-                            type: "link",
-                            title: "NFT Details",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/nft-create",
-                            type: "link",
-                            title: "Create NFT",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/nft-wallet-integration",
-                            type: "link",
-                            title: "Wallet Integration",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/nft-live-auction",
-                            type: "link",
-                            title: "Live Auction",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                    }
-                ),
-                new MainMenuItems (
-                    type: "sub",
-                    title: "CRM",
-                    badgeValue: "New",
-                    badgeClass: "bg-secondary-transparent",
-                    selected: false,
-                    active: false,
-                    dirChange: false,
-                    children: new MainMenuItems[]
-                    {
-                        new MainMenuItems (
-                            path: "/crm-contacts",
-                            type: "link",
-                            title: "Contacts",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/crm-companies",
-                            type: "link",
-                            title: "Companies",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/crm-deals",
-                            type: "link",
-                            title: "Deals",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/crm-leads",
-                            type: "link",
-                            title: "Leads",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                    }
-                ),
-                new MainMenuItems (
-                    type: "sub",
-                    title: "Crypto",
-                    badgeValue: "New",
-                    badgeClass: "bg-secondary-transparent",
-                    selected: false,
-                    active: false,
-                    dirChange: false,
-                    children: new MainMenuItems[]
-                    {
-                        new MainMenuItems (
-                            path: "/crypto-transactions",
-                            type: "link",
-                            title: "Transactions",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/crypto-currency-exchange",
-                            type: "link",
-                            title: "Currency Exchange",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/crypto-buy_sell",
-                            type: "link",
-                            title: "Buy & Sell",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/crypto-marketcap",
-                            type: "link",
-                            title: "Marketcap",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/crypto-wallet",
-                            type: "link",
-                            title: "Wallet",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                    }
-                ),
-            }
-        ),
-        new MainMenuItems (
-            type: "sub",
-            title: "Nested Menu",
-            icon: "bx bx-layer",
-            selected: false,
-            active: false,
-            dirChange: false,
-            children: new MainMenuItems[]
-            {
-                new MainMenuItems (
-                    path: "",
-                    type: "empty",
-                    title: "Nested-1",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-                new MainMenuItems (
-                    type: "sub",
-                    title: "Nested-2",
-                    selected: false,
-                    active: false,
-                    dirChange: false,
-                    children: new MainMenuItems[]
-                    {
-                        new MainMenuItems (
-                            path: "",
-                            type: "empty",
-                            title: "Nested-2-1",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            type: "sub",
-                            title: "Nested-2-2",
-                            selected: false,
-                            active: false,
-                            dirChange: false,
-                            children: new MainMenuItems[]
-                            {
-                                new MainMenuItems (
-                                    path: "",
-                                    type: "empty",
-                                    title: "Nested-2-2-1",
-                                    selected: false,
-                                    active: false,
-                                    dirChange: false
-                                ),
-                                new MainMenuItems (
-                                    path: "",
-                                    type: "empty",
-                                    title: "Nested-2-2-2",
-                                    selected: false,
-                                    active: false,
-                                    dirChange: false
-                                )
-                            }
-                        )
-                    }
-                )
-            }
-        ),
-        new MainMenuItems (
-            menuTitle: "TABLES & CHARTS"
-        ),
-        new MainMenuItems (
-            type: "sub",
-            title: "Tables",
-            icon: "bx bx-table",
-            badgeValue: "3",
-            badgeClass: "bg-success-transparent",
-            selected: false,
-            active: false,
-            dirChange: false,
-            children: new MainMenuItems[]
-            {
-                new MainMenuItems (
-                    path: "/tables",
-                    type: "link",
-                    title: "Tables",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-                new MainMenuItems (
-                    path: "/grid-tables",
-                    type: "link",
-                    title: "Grid Tables",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-                new MainMenuItems (
-                    path: "/data-tables",
-                    type: "link",
-                    title: "Data Tables",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-            }
-        ),
-        new MainMenuItems (
-            type: "sub",
-            title: "Charts",
-            icon: "bx bx-bar-chart-square",
-            selected: false,
-            active: false,
-            dirChange: false,
-            children: new MainMenuItems[]
-            {
-                new MainMenuItems (
-                    type: "sub",
-                    title: "Apex Charts",
-                    selected: false,
-                    active: false,
-                    dirChange: false,
-                    children: new MainMenuItems[]
-                    {
-                        new MainMenuItems (
-                            path: "/apex-line-charts",
-                            type: "link",
-                            title: "Line Charts",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/apex-area-charts",
-                            type: "link",
-                            title: "Area Charts",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/apex-column-charts",
-                            type: "link",
-                            title: "Column Charts",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/apex-bar-charts",
-                            type: "link",
-                            title: "Bar Charts",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/apex-mixed-charts",
-                            type: "link",
-                            title: "Mixed Charts",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/apex-candlestick-charts",
-                            type: "link",
-                            title: "Candle Stick Charts",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/apex-boxplot-charts",
-                            type: "link",
-                            title: "Boxplot Charts",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/apex-bubble-charts",
-                            type: "link",
-                            title: "Bubble Charts",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/apex-scatter-charts",
-                            type: "link",
-                            title: "Scatter Charts",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/Apex-heatmap-charts",
-                            type: "link",
-                            title: "Heatmap Charts",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/apex-timeline-charts",
-                            type: "link",
-                            title: "Timeline Charts",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/apex-treemap-charts",
-                            type: "link",
-                            title: "Treemap Charts",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/apex-rangearea-charts",
-                            type: "link",
-                            title: "RangeArea Charts",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/apex-pie-charts",
-                            type: "link",
-                            title: "Pie Charts",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/apex-radialbar-charts",
-                            type: "link",
-                            title: "Radialbar Charts",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/apex-radar-charts",
-                            type: "link",
-                            title: "Radar Charts",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/apex-polararea-charts",
-                            type: "link",
-                            title: "Polararea Charts",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                        new MainMenuItems (
-                            path: "/Apex-funnel-charts",
-                            type: "link",
-                            title: "Funnel Charts",
-                            selected: false,
-                            active: false,
-                            dirChange: false
-                        ),
-                    }
-                ),
-                new MainMenuItems (
-                    path: "/chartjs-charts",
-                    type: "link",
-                    title: "Chartjs",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-            }
-        ),
-        new MainMenuItems (
-            menuTitle: "MAPS & ICONS"
-        ),
-        new MainMenuItems (
-            type: "sub",
-            title: "Maps",
-            icon: "bx bx-map",
-            selected: false,
-            active: false,
-            dirChange: false,
-            children: new MainMenuItems[]
-            {
-                new MainMenuItems (
-                    path: "/google-maps",
-                    type: "link",
-                    title: "Google Maps",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-                new MainMenuItems (
-                    path: "/leaflet-maps",
-                    type: "link",
-                    title: "Leaflet Maps",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                ),
-                new MainMenuItems (
-                    path: "/vector-maps",
-                    type: "link",
-                    title: "Jsvector Maps",
-                    selected: false,
-                    active: false,
-                    dirChange: false
-                )
-            }
-        ),
-        new MainMenuItems (
-            path: "/icons",
-            type: "link",
-            icon: "bx bx-store-alt",
-            title: "Icons",
-            selected: false,
-            active: false,
-            dirChange: false
-        ),
-    };
+        ), */
+        };
 
     public List<MainMenuItems> GetMenuData()
    {

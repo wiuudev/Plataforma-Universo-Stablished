@@ -10,11 +10,11 @@
 
                 <!-- Page Header -->
                 <div class="d-md-flex d-block align-items-center justify-content-between my-4 page-header-breadcrumb">
-                    <h1 class="page-title fw-semibold fs-18 mb-0">Checkout</h1>
+                    <h1 class="page-title fw-semibold fs-18 mb-0">Pagamento</h1>
                     <div class="ms-md-1 ms-0">
                         <nav>
                             <ol class="breadcrumb mb-0">
-                                <li class="breadcrumb-item"><a href="javascript:void(0);">Ecommerce</a></li>
+                                <li class="breadcrumb-item"><a href="javascript:void(0);">Pagamento</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Checkout</li>
                             </ol>
                         </nav>
@@ -33,25 +33,25 @@
                                             <button @onclick="GoBackToOrderTab" class="nav-link @Ordertab" id="order-tab" data-bs-toggle="tab"
                                                 data-bs-target="#order-tab-pane" type="button" role="tab"
                                                 aria-controls="order-tab" aria-selected="true"><i
-                                                    class="ri-truck-line me-2 align-middle"></i>Shipping</button>
+                                                    class="ri-truck-line me-2 align-middle"></i>Envio</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button @onclick="ShowConfirmedTab" class="nav-link @Confirmedtab" id="confirmed-tab" data-bs-toggle="tab"
                                                 data-bs-target="#confirm-tab-pane" type="button" role="tab"
                                                 aria-controls="confirmed-tab" aria-selected="false"><i
-                                                    class="ri-user-3-line me-2 align-middle"></i>Personal Details</button>
+                                                    class="ri-user-3-line me-2 align-middle"></i>Detalhes pessoais</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button @onclick="ShowShippedTab" class="nav-link @Shippedtab" id="shipped-tab" data-bs-toggle="tab"
                                                 data-bs-target="#shipped-tab-pane" type="button" role="tab"
                                                 aria-controls="shipped-tab" aria-selected="false"><i
-                                                    class="ri-bank-card-line me-2 align-middle"></i>Payment</button>
+                                                    class="ri-bank-card-line me-2 align-middle"></i>Pagamento</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button @onclick="ShowDeliveredTab" class="nav-link @Deliveredtab" id="delivered-tab" data-bs-toggle="tab"
                                                 data-bs-target="#delivery-tab-pane" type="button" role="tab"
                                                 aria-controls="delivered-tab" aria-selected="false"><i
-                                                    class="ri-checkbox-circle-line me-2 align-middle"></i>Confirmation</button>
+                                                    class="ri-checkbox-circle-line me-2 align-middle"></i>Confirmação</button>
                                         </li>
                                     </ul>
                                     <div class="tab-content" id="myTabContent">
@@ -62,61 +62,61 @@
                                                 <div class="p-4">
                                                     <p class="mb-1 fw-semibold text-muted op-5 fs-20">01</p>
                                                     <div class="fs-15 fw-semibold d-sm-flex d-block align-items-center justify-content-between mb-3">
-                                                        <div>Shipping Address :</div>
+                                                        <div>Endereço de entrega :</div>
                                                         <div class="mt-sm-0 mt-2">
-                                                            <button type="button" class="btn btn-primary btn-sm"  data-bs-toggle="modal" data-bs-target="#modal-new-address"><i class="ri-add-line me-1 align-middle fs-14 fw-semibold d-inline-block"></i>Add New Address</button>
+                                                            <button type="button" class="btn btn-primary btn-sm"  data-bs-toggle="modal" data-bs-target="#modal-new-address"><i class="ri-add-line me-1 align-middle fs-14 fw-semibold d-inline-block"></i>Adicionar dados pessoais</button>
                                                             <div class="modal fade"  id="modal-new-address" tabindex="-1" aria-labelledby="modal-new-address" aria-hidden="true">
                                                                 <div class="modal-dialog modal-lg modal-dialog-centered">
                                                                     <div class="modal-content">
                                                                         <div class="modal-header">
-                                                                            <h6 class="modal-title" id="staticBackdropLabel">New Address
+                                                                            <h6 class="modal-title" id="staticBackdropLabel">Novo endereço
                                                                             </h6>
                                                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                         </div>
                                                                         <div class="modal-body">
                                                                             <div class="row gy-3">
                                                                                 <div class="col-xl-6">
-                                                                                    <label for="fullname-new" class="form-label">Full Name</label>
-                                                                                    <input type="text" class="form-control" id="fullname-new" placeholder="Full Name">
+                                                                                    <label for="fullname-new" class="form-label">Nome Completo</label>
+                                                                                    <input type="text" class="form-control" id="fullname-new" placeholder="Nome completo">
                                                                                 </div>
                                                                                 <div class="col-xl-6">
                                                                                     <label for="email-new" class="form-label">Email</label>
                                                                                     <input type="email" class="form-control" id="email-new" placeholder="email">
                                                                                 </div>
                                                                                 <div class="col-xl-6">
-                                                                                    <label for="phonenumber-new" class="form-label">Phone Number</label>
-                                                                                    <input type="number" class="form-control" id="phonenumber-new" placeholder="Phone">
+                                                                                    <label for="phonenumber-new" class="form-label">Telefone</label>
+                                                                                    <input type="number" class="form-control" id="phonenumber-new" placeholder="Telefone">
                                                                                 </div>
                                                                                 <div class="col-xl-6">
-                                                                                    <label for="address-new" class="form-label">Address</label>
-                                                                                    <input type="text" class="form-control" id="address-new" placeholder="Address">
+                                                                                    <label for="address-new" class="form-label">Endereço</label>
+                                                                                    <input type="text" class="form-control" id="address-new" placeholder="Endereço">
                                                                                 </div>
                                                                                 <div class="col-xl-12">
                                                                                     <div class="row">
                                                                                         <div class="col-xl-3">
-                                                                                            <label for="pincode-new" class="form-label">Pincode</label>
-                                                                                            <input type="number" class="form-control" id="pincode-new" placeholder="Pinicode">
+                                                                                            <label for="pincode-new" class="form-label">CEP</label>
+                                                                                            <input type="number" class="form-control" id="pincode-new" placeholder="CEP">
                                                                                         </div>
                                                                                         <div class="col-xl-3">
-                                                                                            <label for="city-new" class="form-label">City</label>
-                                                                                            <input type="text" class="form-control" id="city-new" placeholder="City">
+                                                                                            <label for="city-new" class="form-label">Cidade</label>
+                                                                                            <input type="text" class="form-control" id="city-new" placeholder="Cidade">
                                                                                         </div>
                                                                                         <div class="col-xl-3">
-                                                                                            <label for="state-new" class="form-label">State</label>
-                                                                                            <input type="text" class="form-control" id="state-new" placeholder="State">
+                                                                                            <label for="state-new" class="form-label">Estado</label>
+                                                                                            <input type="text" class="form-control" id="state-new" placeholder="Estado">
                                                                                         </div>
                                                                                         <div class="col-xl-3">
-                                                                                            <label for="country-new" class="form-label">Country</label>
-                                                                                            <input type="text" class="form-control" id="country-new" placeholder="Country">
+                                                                                            <label for="country-new" class="form-label">País</label>
+                                                                                            <input type="text" class="form-control" id="country-new" placeholder="País">
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="modal-footer">
-                                                                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                                                            <button type="button" class="btn btn-success">Save
-                                                                                Address</button>
+                                                                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Fechar</button>
+                                                                            <button type="button" class="btn btn-success">Salvar
+                                                                                Endereço</button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -126,31 +126,31 @@
                                                     <div class="row gy-4 mb-4">
                                                         <div class="col-xl-6">
                                                             <div class="form-floating">
-                                                                <input type="text" class="form-control" id="fullname-add" value="Json Taylor" placeholder="Name">
-                                                                <label for="fullname-add">Full Name</label>
+                                                                <input type="text" class="form-control" id="fullname-add" value="William Rodrigues" placeholder="Nome">
+                                                                <label for="fullname-add">Nome completo</label>
                                                             </div>
                                                         </div>
                                                         <div class="col-xl-6">
                                                             <div class="form-floating">
-                                                                <input type="email" class="form-control" id="email-add" value="jsontaylor2413@gmail.com" placeholder="name@example.com">
+                                                                <input type="email" class="form-control" id="email-add" value="contato@gmail.com" placeholder="contato@gmail.com">
                                                                 <label for="email-add">Email</label>
                                                             </div>
                                                         </div>
                                                         <div class="col-xl-6">
                                                             <div class="form-floating">
                                                                 <input type="email" class="form-control is-valid" id="phoneno-add" value="(555) 555-1234" placeholder="1234-XX-XXXX">
-                                                                <label for="phoneno-add">Phone No</label>
+                                                                <label for="phoneno-add">Telefone</label>
                                                             </div>
                                                         </div>
                                                         <div class="col-xl-6">
                                                             <div class="form-floating">
-                                                                <textarea class="form-control" placeholder="Address Here" id="address-add">MIG-1-11,Monroe Street,Washington D.C,USA</textarea>
-                                                                <label for="address-add">Address</label>
+                                                                <textarea class="form-control" placeholder="Endereço aqui" id="address-add"></textarea>
+                                                                <label for="address-add">Endereço</label>
                                                             </div>
                                                             <div class="form-check mt-1">
                                                                 <input class="form-check-input form-checked-outline form-checked-success" type="checkbox" value="" id="invalidCheck" required checked>
                                                                 <label class="form-check-label text-success" for="invalidCheck">
-                                                                    Same as Billing Address ?
+                                                                    Mesmo endereço de cobrança ?
                                                                 </label>
                                                             </div>
                                                         </div>
@@ -158,121 +158,34 @@
                                                             <div class="row gy-2">
                                                                 <div class="col-xl-3">
                                                                     <div class="form-floating">
-                                                                        <input type="text" class="form-control is-valid" id="pincode-add" value="20071" placeholder="Name">
-                                                                        <label for="pincode-add">Pin Code</label>
+                                                                        <input type="text" class="form-control is-valid" id="pincode-add" value="000000-000" placeholder="Nome">
+                                                                        <label for="pincode-add">CEP</label>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-xl-3">
                                                                     <div class="form-floating">
-                                                                        <input type="text" class="form-control" id="city-add" value="Georgetown" placeholder="Name">
-                                                                        <label for="city-add">City</label>
+                                                                        <input type="text" class="form-control" id="city-add" value="Santa Rosa" placeholder="Nome">
+                                                                        <label for="city-add">Cidade</label>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-xl-3">
                                                                     <div class="form-floating">
-                                                                        <input type="text" class="form-control" id="state-add" value="Washington, D.C" placeholder="Name">
-                                                                        <label for="state-add">State</label>
+                                                                        <input type="text" class="form-control" id="state-add" value="Santa Rosa, RS" placeholder="Nome">
+                                                                        <label for="state-add">Estado</label>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-xl-3">
                                                                     <div class="form-floating">
-                                                                        <input type="text" class="form-control" id="country-add" value="USA" placeholder="Name">
-                                                                        <label for="country-add">Country</label>
+                                                                        <input type="text" class="form-control" id="country-add" value="BR" placeholder="Nome">
+                                                                        <label for="country-add">País</label>
                                                                     </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row gy-3">
-                                                        <p class="fs-15 fw-semibold mb-1">Shipping Methods :</p>
-                                                        <div class="col-xl-6">
-                                                            <div class="form-check shipping-method-container mb-0">
-                                                                <input id="shipping-method1" name="shipping-methods" type="radio" class="form-check-input" checked>
-                                                                <div class="form-check-label">
-                                                                <div class="d-sm-flex align-items-center justify-content-between">
-                                                                    <div class="me-2">
-                                                                        <span class="avatar avatar-md">
-                                                                            <img src="../assets/images/ecommerce/png/28.png" alt="">
-                                                                        </span>
-                                                                    </div>
-                                                                    <div class="shipping-partner-details me-sm-5 me-0">
-                                                                        <p class="mb-0 fw-semibold">UPS</p>
-                                                                        <p class="text-muted fs-11 mb-0">Delivered By 24,Nov 2022</p>
-                                                                    </div>
-                                                                    <div class="fw-semibold me-sm-5 me-0">
-                                                                        $9.99
-                                                                    </div>
-                                                                </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-6">
-                                                            <div class="form-check shipping-method-container mb-0">
-                                                                <input id="shipping-method2" name="shipping-methods" type="radio" class="form-check-input">
-                                                                <div class="form-check-label">
-                                                                <div class="d-sm-flex align-items-center justify-content-between">
-                                                                    <div class="me-2">
-                                                                        <span class="avatar avatar-md">
-                                                                            <img src="../assets/images/ecommerce/png/31.png" alt="">
-                                                                        </span>
-                                                                    </div>
-                                                                    <div class="shipping-partner-details me-sm-5 me-0">
-                                                                        <p class="mb-0 fw-semibold">USPS</p>
-                                                                        <p class="text-muted fs-11 mb-0">Delivered By 22,Nov 2022</p>
-                                                                    </div>
-                                                                    <div class="fw-semibold me-sm-5 me-0">
-                                                                        $10.49
-                                                                    </div>
-                                                                </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-6">
-                                                            <div class="form-check shipping-method-container mb-0">
-                                                                <input id="shipping-method3" name="shipping-methods" type="radio" class="form-check-input">
-                                                                <div class="form-check-label">
-                                                                <div class="d-sm-flex align-items-center justify-content-between">
-                                                                    <div class="me-2">
-                                                                        <span class="avatar avatar-md">
-                                                                            <img src="../assets/images/ecommerce/png/29.png" alt="">
-                                                                        </span>
-                                                                    </div>
-                                                                    <div class="shipping-partner-details me-sm-5 me-0">
-                                                                        <p class="mb-0 fw-semibold">FedEx</p>
-                                                                        <p class="text-muted fs-11 mb-0">Delivered Tomorrow</p>
-                                                                    </div>
-                                                                    <div class="fw-semibold me-sm-5 me-0">
-                                                                        $12.29
-                                                                    </div>
-                                                                </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-6">
-                                                            <div class="form-check shipping-method-container mb-0">
-                                                                <input id="shipping-method4" name="shipping-methods" type="radio" class="form-check-input">
-                                                                <div class="form-check-label">
-                                                                <div class="d-sm-flex align-items-center justify-content-between">
-                                                                    <div class="me-2">
-                                                                        <span class="avatar avatar-md">
-                                                                            <img src="../assets/images/ecommerce/png/30.png" alt="">
-                                                                        </span>
-                                                                    </div>
-                                                                    <div class="shipping-partner-details me-sm-5 me-0">
-                                                                        <p class="mb-0 fw-semibold">DHL</p>
-                                                                        <p class="text-muted fs-11 mb-0">Delivered Today</p>
-                                                                    </div>
-                                                                    <div class="fw-semibold me-sm-5 me-0">
-                                                                        $18.99
-                                                                    </div>
-                                                                </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="px-4 py-3 border-top border-block-start-dashed d-sm-flex justify-content-end">
-                                                    <button type="button" class="btn btn-success-light" @onclick="ShowConfirmedTab" id="personal-details-trigger">Personal Details<i class="ri-user-3-line ms-2 align-middle d-inline-block"></i></button>
+                                                    <button type="button" class="btn btn-success-light" @onclick="ShowConfirmedTab" id="personal-details-trigger">Detalhes pessoais<i class="ri-user-3-line ms-2 align-middle d-inline-block"></i></button>
                                                 </div>
                                             </div>
                                         }
@@ -283,66 +196,66 @@
                                             <div class="p-4">
                                                 <p class="mb-1 fw-semibold text-muted op-5 fs-20">02</p>
                                                 <div class="fs-15 fw-semibold d-sm-flex d-block align-items-center justify-content-between mb-3">
-                                                    <div>Personal Details :</div>
+                                                    <div>Detalhes pessoais :</div>
                                                 </div>
                                                 <div class="row gy-4">
                                                     <div class="col-xl-6">
-                                                        <label for="firstname-personal" class="form-label">First Name</label>
-                                                        <input type="text" class="form-control" id="firstname-personal" placeholder="First Name" value="Json">
-                                                    </div>
+                                                        <label for="firstname-personal" class="form-label">Primeiro Nome</label>
+                                                            <input type="text" class="form-control" id="firstname-personal" placeholder="First Name" value="William">
+                                                    </div>  
                                                     <div class="col-xl-6">
-                                                        <label for="lastname-personal" class="form-label">Last Name</label>
-                                                        <input type="text" class="form-control" id="lastname-personal" placeholder="Last Name" value="Taylor">
+                                                        <label for="lastname-personal" class="form-label">Sobrenome</label>
+                                                        <input type="text" class="form-control" id="lastname-personal" placeholder="Last Name" value="Rodrigues">
                                                     </div>
                                                     <div class="col-xl-6">
                                                         <label for="email-personal" class="form-label">Email</label>
-                                                        <input type="email" class="form-control" id="email-personal" placeholder="xyz@example.com" value="">
+                                                        <input type="email" class="form-control" id="email-personal" placeholder="contato@example.com" value="">
                                                     </div>
                                                     <div class="col-xl-6">
-                                                        <label for="phoneno-personal" class="form-label">Phone no</label>
+                                                        <label for="phoneno-personal" class="form-label">Telefone</label>
                                                         <input type="text" class="form-control" id="phoneno-personal" placeholder="(555)-555-1234" value="">
                                                     </div>
                                                     <div class="col-xxl-2">
-                                                        <label for="pincode-personal" class="form-label">Pincode</label>
+                                                        <label for="pincode-personal" class="form-label">CEP</label>
                                                         <input type="text" class="form-control" id="pincode-personal" placeholder="200017" value="">
                                                     </div>
                                                     <div class="col-xxl-4">
-                                                        <label class="form-label">City</label>
+                                                        <label class="form-label">Cidade</label>
                                                         <select class="form-control tomselect">
-                                                            <option value="Choice 1">Georgetown</option>
-                                                            <option value="Choice 2">Alexandria</option>
-                                                            <option value="Choice 3">Rockville</option>
-                                                            <option value="Choice 4">Frederick</option>
+                                                            <option value="Choice 1">Cidade 1</option>
+                                                            <option value="Choice 2">Cidade 2</option>
+                                                            <option value="Choice 3">Cidade 3</option>
+                                                            <option value="Choice 4">Cidade 4</option>
                                                         </select>
                                                     </div>
                                                     <div class="col-xxl-4">
-                                                        <label class="form-label">State</label>
+                                                        <label class="form-label">Estado</label>
                                                         <select class="form-control tomselect">
-                                                            <option value="Choice 1">Washington,D.C</option>
-                                                            <option value="Choice 2">California</option>
-                                                            <option value="Choice 3">Texas</option>
-                                                            <option value="Choice 4">Alaska</option>
+                                                            <option value="Choice 1">Estado 1</option>
+                                                            <option value="Choice 2">Estado 2</option>
+                                                            <option value="Choice 3">Estado 3</option>
+                                                            <option value="Choice 4">Estado 4</option>
                                                         </select>
                                                     </div>
                                                     <div class="col-xxl-2">
-                                                        <label for="country-personal" class="form-label">Country</label>
-                                                        <input type="text" class="form-control" id="country-personal" placeholder="Country" value="USA">
+                                                        <label for="country-personal" class="form-label">Região</label>
+                                                        <input type="text" class="form-control" id="country-personal" placeholder="Região" value="BR">
                                                     </div>
                                                     <div class="col-xl-12">
-                                                        <label for="text-area" class="form-label">Address</label>
+                                                        <label for="text-area" class="form-label">Endereço</label>
                                                         <textarea class="form-control" id="text-area" rows="4"></textarea>
                                                         <div class="form-check mt-1">
                                                             <input class="form-check-input form-checked-outline form-checked-success" type="checkbox" value="" id="invalidCheck1" required checked>
                                                             <label class="form-check-label text-success fs-12" for="invalidCheck1">
-                                                                Same as Shipping Address Address ?
+                                                                Mesmo endereço de entrega ?
                                                             </label>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="px-4 py-3 border-top border-block-start-dashed d-sm-flex justify-content-between">
-                                                <button type="button" @onclick="GoBackToOrderTab" class="btn btn-danger-light m-1" id="back-shipping-trigger"><i class="ri-truck-line me-2 align-middle d-inline-block"></i>Back To Shipping</button>
-                                                <button type="button" @onclick="ShowShippedTab" class="btn btn-success-light m-1" id="payment-trigger">Continue To Payment<i class="bi bi-credit-card-2-front align-middle ms-2 d-inline-block"></i></button>
+                                                <button type="button" @onclick="GoBackToOrderTab" class="btn btn-danger-light m-1" id="back-shipping-trigger"><i class="ri-truck-line me-2 align-middle d-inline-block"></i>Voltar para cobrança</button>
+                                                <button type="button" @onclick="ShowShippedTab" class="btn btn-success-light m-1" id="payment-trigger">Continuar para o pagamento<i class="bi bi-credit-card-2-front align-middle ms-2 d-inline-block"></i></button>
                                             </div>
                                         </div>
                                         }
@@ -353,59 +266,54 @@
                                             <div class="p-4">
                                                 <p class="mb-1 fw-semibold text-muted op-5 fs-20">03</p>
                                                 <div class="fs-15 fw-semibold d-sm-flex d-block align-items-center justify-content-between mb-3">
-                                                    <div>Payment Details :</div>
+                                                    <div>Detalhes do pagamento :</div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-xl-12">
                                                         <div class="mb-3">
-                                                            <label class="form-label">Delivery Address</label>
+                                                            <label class="form-label">Endereço de cobrança</label>
                                                             <div class="input-group">
-                                                                <input type="text" class="form-control" placeholder="Address" aria-label="address" aria-describedby="payment-address" value="MIG-1-11,Monroe Street,Washington D.C,USA">
-                                                                <button type="button"  class="btn btn-info-light input-group-text" id="payment-address">Change</button>
+                                                                <input type="text" class="form-control" placeholder="Address" aria-label="address" aria-describedby="payment-address" value="Santa Rosa, RS">
+                                                                <button type="button"  class="btn btn-info-light input-group-text" id="payment-address">Alterar</button>
                                                             </div>
                                                         </div>
                                                         <div class="card custom-card border shadow-none mb-3">
                                                             <div class="card-header">
                                                                 <div class="card-title">
-                                                                    Payment Methods
+                                                                    Método de pagamento
                                                                 </div>
                                                             </div>
                                                             <div class="card-body">
                                                                 <div class="btn-group mb-3 d-sm-flex d-block" role="group" aria-label="Basic radio toggle button group">
                                                                     <input type="radio" class="btn-check" name="btnradio" id="btnradio1">
-                                                                    <label class="btn btn-outline-light text-default mt-sm-0 mt-1" for="btnradio1">C.O.D(Cash on delivery)</label>
+                                                                    <label class="btn btn-outline-light text-default mt-sm-0 mt-1" for="btnradio1">PIX</label>
                                                                     <input type="radio" class="btn-check" name="btnradio" id="btnradio2">
-                                                                    <label class="btn btn-outline-light text-default mt-sm-0 mt-1" for="btnradio2">UPI</label>
+                                                                    <label class="btn btn-outline-light text-default mt-sm-0 mt-1" for="btnradio2">BOLETO</label>
                                                                     <input type="radio" class="btn-check" name="btnradio" id="btnradio3" checked>
-                                                                    <label class="btn btn-outline-light text-default mt-sm-0 mt-1" for="btnradio3">Credit/Debit Card</label>
+                                                                    <label class="btn btn-outline-light text-default mt-sm-0 mt-1" for="btnradio3">Cartão</label>
                                                                 </div>
                                                                 <div class="row gy-3">
                                                                     <div class="col-xl-12">
-                                                                        <label for="payment-card-number" class="form-label">Card Number</label>
+                                                                        <label for="payment-card-number" class="form-label">Número do cartão</label>
                                                                         <input type="text" class="form-control" id="payment-card-number" placeholder="Card Number" value="1245 - 5447 - 8934 - XXXX">
                                                                     </div>
                                                                     <div class="col-xl-12">
-                                                                        <label for="payment-card-name" class="form-label">Name On Card</label>
-                                                                        <input type="text" class="form-control" id="payment-card-name" placeholder="Name On Card" value="JSON TAYLOR">
+                                                                        <label for="payment-card-name" class="form-label">Nome no cartão</label>
+                                                                        <input type="text" class="form-control" id="payment-card-name" placeholder="Name On Card" value="WILLIAM RODRIGUES">
                                                                     </div>
                                                                     <div class="col-xl-4">
-                                                                        <label for="payment-cardexpiry-date" class="form-label">Expiration Date</label>
+                                                                        <label for="payment-cardexpiry-date" class="form-label">Data de expiração</label>
                                                                         <input type="text" class="form-control" id="payment-cardexpiry-date" placeholder="MM/YY" value="08/2024">
                                                                     </div>
                                                                     <div class="col-xl-4">
                                                                         <label for="payment-cvv" class="form-label">CVV</label>
                                                                         <input type="text" class="form-control" id="payment-cvv" placeholder="XXX" value="341">
                                                                     </div>
-                                                                    <div class="col-xl-4">
-                                                                        <label for="payment-security" class="form-label">O.T.P</label>
-                                                                        <input type="text" class="form-control" id="payment-security" placeholder="XXXXXX" value="183467">
-                                                                        <label for="payment-security" class="form-label mt-1 text-success fs-11"><sup><i class="ri-star-s-fill"></i></sup>Do not share O.T.P with anyone</label>
-                                                                    </div>
                                                                     <div class="col-xl-12">
                                                                         <div class="form-check">
                                                                             <input class="form-check-input form-checked-success" type="checkbox" value="" id="payment-card-save" checked>
                                                                             <label class="form-check-label" for="payment-card-save">
-                                                                                Save this card
+                                                                                Salvar este cartão
                                                                             </label>
                                                                         </div>
                                                                     </div>
@@ -413,7 +321,7 @@
                                                             </div>
                                                             <div class="card-footer">
                                                                 <div class="row gy-3">
-                                                                    <p class="fs-15 fw-semibold mb-1">Saved Cards :</p>
+                                                                    <p class="fs-15 fw-semibold mb-1">Cartões Salvos :</p>
                                                                     <div class="col-xl-6">
                                                                         <div class="form-check payment-card-container mb-0 lh-1">
                                                                             <input id="payment-card1" name="payment-cards" type="radio" class="form-check-input" checked>
@@ -455,8 +363,8 @@
                                                 </div>
                                             </div>
                                             <div class="px-4 py-3 border-top border-block-start-dashed d-sm-flex justify-content-between">
-                                                <button type="button" @onclick="GoBackToConfirmedTab" class="btn btn-danger-light m-1" id="back-personal-trigger"><i class="ri-user-3-line me-2 align-middle d-inline-block"></i>Back To Personal Info</button>
-                                                <button type="button" @onclick="ShowDeliveredTab" class="btn btn-success-light m-1" id="continue-payment-trigger">Continue Payment<i class="bi bi-credit-card-2-front align-middle ms-2 d-inline-block"></i></button>
+                                                <button type="button" @onclick="GoBackToConfirmedTab" class="btn btn-danger-light m-1" id="back-personal-trigger"><i class="ri-user-3-line me-2 align-middle d-inline-block"></i>Voltar para informações pessoais</button>
+                                                <button type="button" @onclick="ShowDeliveredTab" class="btn btn-success-light m-1" id="continue-payment-trigger">Continuar pagamento<i class="bi bi-credit-card-2-front align-middle ms-2 d-inline-block"></i></button>
                                             </div>
                                         </div>
                                         }
@@ -466,16 +374,11 @@
                                             aria-labelledby="delivery-tab-pane" tabindex="0">
                                             <div class="p-5 checkout-payment-success my-3">
                                                 <div class="mb-5">
-                                                    <h5 class="text-success fw-semibold">Payment Successful...&#129309;</h5>
+                                                    <h5 class="text-success fw-semibold">Pagamento Realizado...</h5>
                                                 </div>
                                                 <div class="mb-5">
                                                     <img src="../assets/images/ecommerce/png/24.png" alt="" class="img-fluid">
                                                 </div>
-                                                <div class="mb-4">
-                                                    <p class="mb-1 fs-14">You can track your order with Order Id <b>SPK#1FR</b> from <a class="link-success" href="javascript:void(0);"><u>Track Order</u></a></p>
-                                                    <p class="text-muted">Thankyou for shopping with us.</p>
-                                                </div>
-                                                <a href="/products" class="btn btn-success">Continue Shopping<i class="bi bi-cart ms-2"></i></a>
                                             </div>
                                         </div>
                                         }
@@ -486,7 +389,7 @@
                         <div class="col-xl-3">
                             <div class="card custom-card">
                                 <div class="card-header">
-                                    <div class="card-title me-1">Order Summary</div><span class="badge bg-primary-transparent rounded-pill">02</span>
+                                    <div class="card-title me-1">Ordem de compra</div><span class="badge bg-primary-transparent rounded-pill">01</span>
                                 </div>
                                 <div class="card-body p-0">
                                     <ul class="list-group mb-0 border-0 rounded-0">
@@ -498,8 +401,7 @@
                                                     </span>
                                                 </div>
                                                 <div class="flex-fill">
-                                                    <p class="mb-0 fw-semibold">Blue sweatshirt</p>
-                                                    <p class="mb-0 text-muted fs-12">Quantity : 2  <span class="badge bg-success-transparent ms-3">30% Off</span></p>
+                                                    <p class="mb-0 fw-semibold">Plano mensal</p>
                                                 </div>
                                                 <div>
                                                     <p class="mb-0 text-end">
@@ -507,60 +409,31 @@
                                                             <i class="ri-close-line fs-16 text-muted"></i>
                                                         </a>
                                                     </p>
-                                                    <p class="mb-0 fs-14 fw-semibold">$189<span class="ms-1 text-muted fs-11 d-inline-block"><s>$329</s></span></p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item  border-bottom border-block-end-dashed border-start-0 border-end-0">
-                                            <div class="d-flex align-items-center flex-wrap">
-                                                <div class="me-2">
-                                                    <span class="avatar avatar-lg bg-light">
-                                                        <img src="../assets/images/ecommerce/png/7.png" alt="">
-                                                    </span>
-                                                </div>
-                                                <div class="flex-fill">
-                                                    <p class="mb-0 fw-semibold">Denim Jacket</p>
-                                                    <p class="mb-0 text-muted fs-12">Quantity : 1  <span class="badge bg-success-transparent ms-3">10% Off</span></p>
-                                                </div>
-                                                <div>
-                                                    <p class="mb-0 text-end">
-                                                        <a aria-label="anchor" href="javascript:void(0)">
-                                                            <i class="ri-close-line fs-16 text-muted"></i>
-                                                        </a>
-                                                    </p>
-                                                    <p class="mb-0 fs-14 fw-semibold">$129<span class="ms-1 text-muted fs-11 d-inline-block"><s>$139</s></span></p>
+                                                    <p class="mb-0 fs-14 fw-semibold">R$189<span class="ms-1 text-muted fs-11 d-inline-block"><s>R$329</s></span></p>
                                                 </div>
                                             </div>
                                         </li>
                                     </ul>
                                     <div class="p-3 border-bottom border-block-end-dashed">
                                         <div class="d-flex align-items-center justify-content-between flex-wrap">
-                                            <div class="fs-12 fw-semibold bg-primary-transparent p-1 rounded">SPRUKO25</div>
-                                            <div class="text-success">COUPON APPLIED</div>
+                                            <div class="fs-12 fw-semibold bg-primary-transparent p-1 rounded">UNIGESTOR25</div>
+                                            <div class="text-success">CUPOM APLICADO</div>
                                         </div>
                                     </div>
                                     <div class="p-3 border-bottom border-block-end-dashed">
                                         <div class="d-flex align-items-center justify-content-between mb-3">
                                             <div class="text-muted op-7">Sub Total</div>
-                                            <div class="fw-semibold fs-14">$318</div>
+                                            <div class="fw-semibold fs-14">R$318</div>
                                         </div>
                                         <div class="d-flex align-items-center justify-content-between mb-3">
-                                            <div class="text-muted op-7">Discount</div>
-                                            <div class="fw-semibold fs-14 text-success">10% - $31.8</div>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between mb-3">
-                                            <div class="text-muted op-7">Delivery Charges</div>
-                                            <div class="fw-semibold fs-14 text-danger">- $29</div>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between">
-                                            <div class="text-muted op-7">Service Tax (18%)</div>
-                                            <div class="fw-semibold fs-14">- $45.29</div>
+                                            <div class="text-muted op-7">Desconto</div>
+                                            <div class="fw-semibold fs-14 text-success">10% - R$31.8</div>
                                         </div>
                                     </div>
                                     <div class="p-3">
                                         <div class="d-flex align-items-center justify-content-between">
                                             <div class="fs-15">Total :</div>
-                                            <div class="fw-semibold fs-16 text-dark"> $1,387</div>
+                                            <div class="fw-semibold fs-16 text-dark"> R$118,00</div>
                                         </div>
                                     </div>
                                 </div>
