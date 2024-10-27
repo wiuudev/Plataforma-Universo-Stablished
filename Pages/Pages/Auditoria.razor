@@ -1,0 +1,334 @@
+@page "/auditoria"
+
+<div class="container-fluid">
+    
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <label for="setor">Setor:</label>
+            <input type="text" id="setor" class="form-control" @bind="setor">
+        </div>
+        <div class="col-md-6">
+            <label for="data">Data:</label>
+            <input type="date" id="data" class="form-control" @bind="data">
+        </div>
+    </div>
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th class="text-center">Item</th>
+            <th>Descrição</th>
+            <th class="text-center" colspan="6">Pontuação</th>
+            <th class="text-center">Pontos atingidos</th>
+        </tr>
+        <!-- Linha explicativa para o glossário de pontuação -->
+        <tr>
+            <th colspan="2"><strong>Senso de Utilização</strong></th>
+            <th class="text-center">1</th>
+            <th class="text-center">2</th>
+            <th class="text-center">3</th>
+            <th class="text-center">4</th>
+            <th class="text-center">5</th>
+            <th class="text-center">N/A</th>
+            <th class="text-center fw-bold" >Total: @GetTotalScore(sensoUtilizacaoItens)</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in sensoUtilizacaoItens)
+        {
+        <tr>
+            <td class="text-center">@item.Number</td>
+            <td>@item.Description</td>
+
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="1" @onchange="(e) => SetScore(item, 1)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="2" @onchange="(e) => SetScore(item, 2)">
+            </td>
+            <td class="text-center">
+                <input  type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="3" @onchange="(e) => SetScore(item, 3)">
+            </td>
+            <td class="text-center">
+                <input  type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="4" @onchange="(e) => SetScore(item, 4)">
+            </td>
+            <td class="text-center">
+                <input  type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="5" @onchange="(e) => SetScore(item, 5)">
+            </td>
+            <td class="text-center">
+                <input  type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+            </td>
+
+            <td class="text-center">@item.Score</td>
+        </tr>
+        }
+        <tr>
+            <th colspan="2"><strong>Senso de Arrumação</strong></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th class="text-center fw-bold" >Total: @GetTotalScore(sensoArrumacaoItens)</th>
+        </tr>
+        @foreach (var item in sensoArrumacaoItens)
+        {
+        <tr>
+            <td class="text-center">@item.Number</td>
+            <td>@item.Description</td>
+
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="1" @onchange="(e) => SetScore(item, 1)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="2" @onchange="(e) => SetScore(item, 2)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="3" @onchange="(e) => SetScore(item, 3)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="4" @onchange="(e) => SetScore(item, 4)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="5" @onchange="(e) => SetScore(item, 5)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+            </td>
+
+            <td class="text-center">@item.Score</td>
+        </tr>
+        }
+        <tr>
+            <th colspan="2"><strong>Senso de Limpeza</strong></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th class="text-center fw-bold" >Total: @GetTotalScore(sensoLimpezaItens)</th>
+        </tr>
+        @foreach (var item in sensoLimpezaItens)
+        {
+        <tr>
+            <td class="text-center">@item.Number</td>
+            <td>@item.Description</td>
+
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="1" @onchange="(e) => SetScore(item, 1)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="2" @onchange="(e) => SetScore(item, 2)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="3" @onchange="(e) => SetScore(item, 3)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="4" @onchange="(e) => SetScore(item, 4)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="5" @onchange="(e) => SetScore(item, 5)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+            </td>
+
+            <td class="text-center">@item.Score</td>
+        </tr>
+        }
+        <tr>
+            <th colspan="2"><strong>Senso de Saúde e Higiene</strong></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th class="text-center fw-bold" >Total: @GetTotalScore(sensoSaudeEHigiene)</th>
+        </tr>
+        @foreach (var item in sensoSaudeEHigiene)
+        {
+        <tr>
+            <td class="text-center">@item.Number</td>
+            <td>@item.Description</td>
+
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="1" @onchange="(e) => SetScore(item, 1)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="2" @onchange="(e) => SetScore(item, 2)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="3" @onchange="(e) => SetScore(item, 3)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="4" @onchange="(e) => SetScore(item, 4)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="5" @onchange="(e) => SetScore(item, 5)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+            </td>
+
+            <td class="text-center">@item.Score</td>
+        </tr>
+        }
+        <tr>
+            <th colspan="2"><strong>Senso de Autodisciplina</strong></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th class="text-center fw-bold" >Total: @GetTotalScore(sensoAutodisciplina)</th>
+        </tr>
+        @foreach (var item in sensoAutodisciplina)
+        {
+        <tr>
+            <td class="text-center">@item.Number</td>
+            <td>@item.Description</td>
+
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="1" @onchange="(e) => SetScore(item, 1)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="2" @onchange="(e) => SetScore(item, 2)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="3" @onchange="(e) => SetScore(item, 3)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="4" @onchange="(e) => SetScore(item, 4)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="5" @onchange="(e) => SetScore(item, 5)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+            </td>
+            <td class="text-center">@item.Score</td>
+        </tr>
+        }
+        
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="text-end"><strong>Pontuação Geral:</strong></td>
+            <td class="text-center"><strong>@TotalScore</strong></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td colspan="2" class="text-end"><strong>Percentual de Objetivos Atingidos:</strong></td>
+            <td colspan="5" class="text-center"><strong>@AchievedPercentage.ToString("F2")%</strong></td>
+        </tr>
+
+
+        </tbody>
+    </table>
+    <br>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1"><strong>Observações</strong></label>
+        <br>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <button class="btn btn-primary mt-3" @onclick="SubmitAuditoria">Concluir Auditoria</button>
+    </div>
+    <br>
+</div>
+
+@code {
+    private string setor;
+    private DateTime data = DateTime.Now;
+    private List<AuditableItem> sensoUtilizacaoItens = new List<AuditableItem>();
+    private List<AuditableItem> sensoArrumacaoItens = new List<AuditableItem>();
+    private List<AuditableItem> sensoLimpezaItens = new List<AuditableItem>();
+    private List<AuditableItem> sensoSaudeEHigiene = new List<AuditableItem>();
+    private List<AuditableItem> sensoAutodisciplina = new List<AuditableItem>();
+    
+    private int TotalScore =>
+        GetTotalScore(sensoUtilizacaoItens) +
+        GetTotalScore(sensoArrumacaoItens) +
+        GetTotalScore(sensoLimpezaItens) +
+        GetTotalScore(sensoSaudeEHigiene) +
+        GetTotalScore(sensoAutodisciplina);
+    
+    private const int MaxPoints = 75;
+
+    protected override void OnInitialized()
+    {
+        sensoUtilizacaoItens = new List<AuditableItem>
+        {
+            new AuditableItem { Number = "1.1", Description = "Há equipamentos e/ou ferramentas não utilizadas regularmente no setor", Score = null },
+            new AuditableItem { Number = "1.2", Description = "Há documentos e/ou relatórios desnecessários em cima das mesas e bancadas", Score = null },
+            new AuditableItem { Number = "1.3", Description = "Há equipamentos estragados sem previsão de conserto e lâmpadas queimadas no setor", Score = null }
+        };
+
+        sensoArrumacaoItens = new List<AuditableItem>
+        {
+            new AuditableItem { Number = "2.1", Description = "Há ferramentas e/ou equipamentos em cima de bancadas sem organizar", Score = null },
+            new AuditableItem { Number = "2.2", Description = "Os materiais e ferramentas estão de fácil acesso", Score = null },
+            new AuditableItem { Number = "2.3", Description = "Os materiais estão devidamente organizados e identificados", Score = null }
+        };
+        sensoLimpezaItens = new List<AuditableItem>
+        {
+            new AuditableItem { Number = "3.1", Description = "As bancadas e os equipamentos estão limpos e em condições de uso", Score = null },
+            new AuditableItem { Number = "3.2", Description = "O piso está limpo e sem lixo no chão", Score = null },
+            new AuditableItem { Number = "3.3", Description = "Os documentos usados estão em condições de visualização", Score = null }
+        };
+        sensoSaudeEHigiene = new List<AuditableItem>
+        {
+            new AuditableItem { Number = "4.1", Description = "Os colaboradores estão usando uniforme adequado", Score = null },
+            new AuditableItem { Number = "4.2", Description = "Os colaboradores estão usando EPIs (óculos,protetor auricular e luvas)", Score = null },
+            new AuditableItem { Number = "4.3", Description = "O bebedouro do Setor está limpo e em condições de uso", Score = null }
+        };
+
+        sensoAutodisciplina = new List<AuditableItem>
+        {
+            new AuditableItem { Number = "5.1", Description = "Os colaboradores estão preenchendo os documentos necessários (indicadores)", Score = null },
+            new AuditableItem { Number = "5.2", Description = "Os colaboradores estão registrando ponto dentro do horário definido", Score = null },
+            new AuditableItem { Number = "4.3", Description = "Os colaboradores estão cientes da importância do Programa 5Ss", Score = null }
+        };
+    }
+
+    private void SetScore(AuditableItem item, int? score)
+    {
+        item.Score = score;
+        StateHasChanged(); 
+    }
+    
+    private int GetTotalScore(List<AuditableItem> items)
+    {
+        return items.Sum(i => i.Score ?? 0);
+    }
+    
+    private double AchievedPercentage => 
+        TotalScore > 0 ? (TotalScore / (double)MaxPoints) * 100 : 0;
+
+    private void SubmitAuditoria()
+    {
+        Console.WriteLine("Auditoria enviada");
+    }
+
+    public class AuditableItem
+    {
+        public string Number { get; set; }
+        public string Description { get; set; }
+        public int? Score { get; set; }
+    }
+
+
+}

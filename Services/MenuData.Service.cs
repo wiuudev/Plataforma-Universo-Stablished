@@ -27,10 +27,11 @@ public class MenuDataService
             dirChange: false,
             children: new MainMenuItems[]
             {
+                
                 new MainMenuItems (
-                    path: "/about-us",
+                    path: "/auditoria",
                     type: "link",
-                    title: "Sobre",
+                    title: "Auditoria",
                     selected: false,
                     active: false,
                     dirChange: false
