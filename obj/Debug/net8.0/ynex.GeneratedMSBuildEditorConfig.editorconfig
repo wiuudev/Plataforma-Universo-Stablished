@@ -502,6 +502,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFnZXNcQ29udGFjdHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/rzdoc/Documents/GitHub/Plataforma-Universo-Stablished/Pages/Pages/DiagnosticManager.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFnZXNcRGlhZ25vc3RpY01hbmFnZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/rzdoc/Documents/GitHub/Plataforma-Universo-Stablished/Pages/Pages/Edit-products.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFnZXNcRWRpdC1wcm9kdWN0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -620,10 +624,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/rzdoc/Documents/GitHub/Plataforma-Universo-Stablished/Pages/Tasks/Task-Details.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFza3NcVGFzay1EZXRhaWxzLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/rzdoc/Documents/GitHub/Plataforma-Universo-Stablished/Pages/Teste.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/rzdoc/Documents/GitHub/Plataforma-Universo-Stablished/Pages/Uielements/Alerts.razor]

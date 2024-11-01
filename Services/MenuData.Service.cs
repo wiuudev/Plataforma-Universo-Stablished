@@ -36,6 +36,16 @@ public class MenuDataService
                     active: false,
                     dirChange: false
                 ),
+                
+                new MainMenuItems (
+                    path: "/diagnosticogerencial",
+                    type: "link",
+                    title: "Diagnóstico Gerencial",
+                    selected: false,
+                    active: false,
+                    dirChange: false
+                ),
+                
                 new MainMenuItems (
                     path: "/chat",
                     type: "link",

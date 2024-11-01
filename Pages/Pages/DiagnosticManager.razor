@@ -1,0 +1,919 @@
+﻿@page "/diagnosticogerencial"
+
+<div class="container-fluid">
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th colspan="8" class="text-center">
+            <h1>
+                <strong>Diagnóstico Gerencial</strong>
+            </h1>
+        </th>
+    </tr>
+    <!-- Linha explicativa para o glossário de pontuação -->
+    <tr>
+        <th colspan="2">
+            <strong>RÉGUA DE AVALIAÇÃO</strong>
+        </th>
+        <th class="text-center">N/A</th>
+        <th class="text-center">0</th>
+        <th class="text-center">1</th>
+        <th class="text-center">2</th>
+        <th class="text-center">3</th>
+        <th class="text-center">4</th>
+    </tr>
+    <tr>
+        <th colspan="2">
+            <strong>CRITÉRIOS DE AVALIAÇÃO</strong>
+        </th>
+        <th class="text-center">Não se Aplica</th>
+        <th class="text-center">Não existe</th>
+        <th class="text-center">Fraco <br/> s/ Aplicação <br/> s/ Evidência</th>
+        <th class="text-center">Regular <br/> c/ Aplicação <br/> s/ Evidência</th>
+        <th class="text-center">Bom <br/> c/ Aplicação <br/> c/ Evidência</th>
+        <th class="text-center">Ótimo <br/> Rotina <br/> Exemplar</th>
+    </tr>
+    <tr>
+        <th>
+            <strong>Subtotal</strong>
+        </th>
+        <th class="text-start fw-bold">Total: @TotalScore</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+</table>
+
+<br/>
+
+    <!-- Gestão estratégica -->
+<table class="table table-bordered">
+<thead>
+<!-- Linha explicativa para o glossário de pontuação -->
+<tr>
+    <th colspan="8" class="text-center">
+        <h1>
+            <strong>GESTÃO ESTRATÉGICA</strong>
+        </h1>
+    </th>
+</tr>
+
+<tr>
+    <th class="text-center">
+        <strong>A) Planejamento</strong>
+    </th>
+    <th class="text-center"></th>
+    <th class="text-center">N/A</th>
+    <th class="text-center">0</th>
+    <th class="text-center">1</th>
+    <th class="text-center">2</th>
+    <th class="text-center">3</th>
+    <th class="text-center">4</th>
+</tr>
+</thead>
+<tbody>
+@foreach (var item in planejamentoItens)
+{
+    <tr>
+        <td class="text-center">@item.Number</td>
+        <td>@item.Description</td>
+
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="1" @onchange="(e) => SetScore(item, 1)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="2" @onchange="(e) => SetScore(item, 2)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="3" @onchange="(e) => SetScore(item, 3)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="4" @onchange="(e) => SetScore(item, 4)">
+        </td>
+    </tr>
+}
+<tr>
+    <th class="text-center" colspan="1"><strong>Subtotal</strong></th>
+    <th class="text-start" colspan="7">@GetTotalScore(financasItens)</th>
+</tr>
+
+<tr>
+    <th class="text-center">
+        <strong>B) FINANÇAS</strong>
+    </th>
+    <th class="text-center"></th>
+    <th class="text-center">N/A</th>
+    <th class="text-center">0</th>
+    <th class="text-center">1</th>
+    <th class="text-center">2</th>
+    <th class="text-center">3</th>
+    <th class="text-center">4</th>
+</tr>
+@foreach (var item in financasItens)
+{
+    <tr>
+        <td class="text-center">@item.Number</td>
+        <td>@item.Description</td>
+
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="1" @onchange="(e) => SetScore(item, 1)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="2" @onchange="(e) => SetScore(item, 2)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="3" @onchange="(e) => SetScore(item, 3)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="4" @onchange="(e) => SetScore(item, 4)">
+        </td>
+    </tr>
+}
+
+<tr>
+    <th class="text-center" colspan="1">
+        <strong>Subtotal</strong>
+    </th>
+    <th class="text-start" colspan="7">@GetTotalScore(financasItens)</th>
+</tr>
+<tr>
+    <th class="text-center">
+        <strong>C) ADMINISTRATIVO</strong>
+    </th>
+    <th class="text-center"></th>
+    <th class="text-center">N/A</th>
+    <th class="text-center">0</th>
+    <th class="text-center">1</th>
+    <th class="text-center">2</th>
+    <th class="text-center">3</th>
+    <th class="text-center">4</th>
+</tr>
+@foreach (var item in administrativoItens)
+{
+    <tr>
+        <td class="text-center">@item.Number</td>
+        <td>@item.Description</td>
+
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="1" @onchange="(e) => SetScore(item, 1)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="2" @onchange="(e) => SetScore(item, 2)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="3" @onchange="(e) => SetScore(item, 3)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="4" @onchange="(e) => SetScore(item, 4)">
+        </td>
+    </tr>
+}
+
+<tr>
+    <th class="text-center" colspan="1">
+        <strong>Subtotal</strong>
+    </th>
+    <th class="text-start" colspan="7">@GetTotalScore(financasItens)</th>
+</tr>
+<tr>
+    <th class="text-center">
+        <strong>D) RECURSOS HUMANOS</strong>
+    </th>
+    <th class="text-center"></th>
+    <th class="text-center">N/A</th>
+    <th class="text-center">0</th>
+    <th class="text-center">1</th>
+    <th class="text-center">2</th>
+    <th class="text-center">3</th>
+    <th class="text-center">4</th>
+</tr>
+@foreach (var item in recursosHumanosItens)
+{
+    <tr>
+        <td class="text-center">@item.Number</td>
+        <td>@item.Description</td>
+
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="1" @onchange="(e) => SetScore(item, 1)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="2" @onchange="(e) => SetScore(item, 2)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="3" @onchange="(e) => SetScore(item, 3)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="4" @onchange="(e) => SetScore(item, 4)">
+        </td>
+    </tr>
+}
+
+<tr>
+    <th class="text-center" colspan="1">
+        <strong>Subtotal</strong>
+    </th>
+    <th class="text-start" colspan="7">@GetTotalScore(financasItens)</th>
+</tr>
+<tr>
+    <th class="text-center">
+        <strong>E) LIDERANÇA</strong>
+    </th>
+    <th class="text-center"></th>
+    <th class="text-center">N/A</th>
+    <th class="text-center">0</th>
+    <th class="text-center">1</th>
+    <th class="text-center">2</th>
+    <th class="text-center">3</th>
+    <th class="text-center">4</th>
+</tr>
+@foreach (var item in liderancaItens)
+{
+    <tr>
+        <td class="text-center">@item.Number</td>
+        <td>@item.Description</td>
+
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="1" @onchange="(e) => SetScore(item, 1)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="2" @onchange="(e) => SetScore(item, 2)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="3" @onchange="(e) => SetScore(item, 3)">
+        </td>
+        <td class="text-center">
+            <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="4" @onchange="(e) => SetScore(item, 4)">
+        </td>
+    </tr>
+}
+
+<tr>
+    <th class="text-center" colspan="1">
+        <strong>Subtotal</strong>
+    </th>
+    <th class="text-start" colspan="7">@GetTotalScore(financasItens)</th>
+</tr>
+
+</tbody>
+</table>
+<br/>
+
+<!-- Gestão mercadológica -->
+
+<table class="table table-bordered">
+        <thead>
+        <!-- Linha explicativa para o glossário de pontuação -->
+        <tr>
+            <th colspan="8" class="text-center">
+                <h1>
+                    <strong>GESTÃO MERCADOLÓGICA</strong>
+                </h1>
+            </th>
+        </tr>
+
+        <tr>
+            <th class="text-center">
+                <strong>F) PRODUTOS / SERVIÇOS</strong>
+            </th>
+            <th class="text-center"></th>
+            <th class="text-center">N/A</th>
+            <th class="text-center">0</th>
+            <th class="text-center">1</th>
+            <th class="text-center">2</th>
+            <th class="text-center">3</th>
+            <th class="text-center">4</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in produtosEServicosItens)
+        {
+        <tr>
+            <td class="text-center">@item.Number</td>
+            <td>@item.Description</td>
+
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="1" @onchange="(e) => SetScore(item, 1)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="2" @onchange="(e) => SetScore(item, 2)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="3" @onchange="(e) => SetScore(item, 3)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="4" @onchange="(e) => SetScore(item, 4)">
+            </td>
+        </tr>
+        }
+        <tr>
+            <th class="text-center" colspan="1"><strong>Subtotal</strong></th>
+            <th class="text-start" colspan="7">@GetTotalScore(produtosEServicosItens)</th>
+        </tr>
+
+        <tr>
+            <th class="text-center">
+                <strong>G) COMERCIALIZAÇÃO</strong>
+            </th>
+            <th class="text-center"></th>
+            <th class="text-center">N/A</th>
+            <th class="text-center">0</th>
+            <th class="text-center">1</th>
+            <th class="text-center">2</th>
+            <th class="text-center">3</th>
+            <th class="text-center">4</th>
+        </tr>
+        @foreach (var item in comercializacaoItens)
+        {
+        <tr>
+            <td class="text-center">@item.Number</td>
+            <td>@item.Description</td>
+
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="1" @onchange="(e) => SetScore(item, 1)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="2" @onchange="(e) => SetScore(item, 2)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="3" @onchange="(e) => SetScore(item, 3)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="4" @onchange="(e) => SetScore(item, 4)">
+            </td>
+        </tr>
+        }
+
+        <tr>
+            <th class="text-center" colspan="1">
+                <strong>Subtotal</strong>
+            </th>
+            <th class="text-start" colspan="7">@GetTotalScore(comercializacaoItens)</th>
+        </tr>
+        <tr>
+            <th class="text-center">
+                <strong>H) INFORMAÇÃO</strong>
+            </th>
+            <th class="text-center"></th>
+            <th class="text-center">N/A</th>
+            <th class="text-center">0</th>
+            <th class="text-center">1</th>
+            <th class="text-center">2</th>
+            <th class="text-center">3</th>
+            <th class="text-center">4</th>
+        </tr>
+        @foreach (var item in informacaoItens)
+        {
+        <tr>
+            <td class="text-center">@item.Number</td>
+            <td>@item.Description</td>
+
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="1" @onchange="(e) => SetScore(item, 1)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="2" @onchange="(e) => SetScore(item, 2)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="3" @onchange="(e) => SetScore(item, 3)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="4" @onchange="(e) => SetScore(item, 4)">
+            </td>
+        </tr>
+        }
+
+        <tr>
+            <th class="text-center" colspan="1">
+                <strong>Subtotal</strong>
+            </th>
+            <th class="text-start" colspan="7">@GetTotalScore(informacaoItens)</th>
+        </tr>
+        <tr>
+            <th class="text-center">
+                <strong>I) COMUNICAÇÃO</strong>
+            </th>
+            <th class="text-center"></th>
+            <th class="text-center">N/A</th>
+            <th class="text-center">0</th>
+            <th class="text-center">1</th>
+            <th class="text-center">2</th>
+            <th class="text-center">3</th>
+            <th class="text-center">4</th>
+        </tr>
+        @foreach (var item in comunicacaoItens)
+        {
+        <tr>
+            <td class="text-center">@item.Number</td>
+            <td>@item.Description</td>
+
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="1" @onchange="(e) => SetScore(item, 1)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="2" @onchange="(e) => SetScore(item, 2)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="3" @onchange="(e) => SetScore(item, 3)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="4" @onchange="(e) => SetScore(item, 4)">
+            </td>
+        </tr>
+        }
+
+        <tr>
+            <th class="text-center" colspan="1">
+                <strong>Subtotal</strong>
+            </th>
+            <th class="text-start" colspan="7">@GetTotalScore(comunicacaoItens)</th>
+        </tr>
+        <tr>
+            <th class="text-center">
+                <strong>J) LOGÍSTICA / DISTRIBUIÇÃO</strong>
+            </th>
+            <th class="text-center"></th>
+            <th class="text-center">N/A</th>
+            <th class="text-center">0</th>
+            <th class="text-center">1</th>
+            <th class="text-center">2</th>
+            <th class="text-center">3</th>
+            <th class="text-center">4</th>
+        </tr>
+        @foreach (var item in logisticaEDistribuicaoItens)
+        {
+        <tr>
+            <td class="text-center">@item.Number</td>
+            <td>@item.Description</td>
+
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="1" @onchange="(e) => SetScore(item, 1)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="2" @onchange="(e) => SetScore(item, 2)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="3" @onchange="(e) => SetScore(item, 3)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="4" @onchange="(e) => SetScore(item, 4)">
+            </td>
+        </tr>
+        }
+
+        <tr>
+            <th class="text-center" colspan="1">
+                <strong>Subtotal</strong>
+            </th>
+            <th class="text-start" colspan="7">@GetTotalScore(logisticaEDistribuicaoItens)</th>
+        </tr>
+
+        </tbody>
+    </table>
+    
+<br>
+
+    <!-- Gestão de produção -->
+
+    <table class="table table-bordered">
+        <thead>
+        <!-- Linha explicativa para o glossário de pontuação -->
+        <tr>
+            <th colspan="8" class="text-center">
+                <h1>
+                    <strong>GESTÃO DE PRODUÇÃO</strong>
+                </h1>
+            </th>
+        </tr>
+
+        <tr>
+            <th class="text-center">
+                <strong>L) PROCESSO PRODUTIVO</strong>
+            </th>
+            <th class="text-center"></th>
+            <th class="text-center">N/A</th>
+            <th class="text-center">0</th>
+            <th class="text-center">1</th>
+            <th class="text-center">2</th>
+            <th class="text-center">3</th>
+            <th class="text-center">4</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in processoProdutivoItens)
+        {
+        <tr>
+            <td class="text-center">@item.Number</td>
+            <td>@item.Description</td>
+
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="1" @onchange="(e) => SetScore(item, 1)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="2" @onchange="(e) => SetScore(item, 2)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="3" @onchange="(e) => SetScore(item, 3)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="4" @onchange="(e) => SetScore(item, 4)">
+            </td>
+        </tr>
+        }
+        <tr>
+            <th class="text-center" colspan="1"><strong>Subtotal</strong></th>
+            <th class="text-start" colspan="7">@GetTotalScore(processoProdutivoItens)</th>
+        </tr>
+
+        <tr>
+            <th class="text-center">
+                <strong>M) QUALIDADE</strong>
+            </th>
+            <th class="text-center"></th>
+            <th class="text-center">N/A</th>
+            <th class="text-center">0</th>
+            <th class="text-center">1</th>
+            <th class="text-center">2</th>
+            <th class="text-center">3</th>
+            <th class="text-center">4</th>
+        </tr>
+        @foreach (var item in qualidadeItens)
+        {
+        <tr>
+            <td class="text-center">@item.Number</td>
+            <td>@item.Description</td>
+
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="1" @onchange="(e) => SetScore(item, 1)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="2" @onchange="(e) => SetScore(item, 2)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="3" @onchange="(e) => SetScore(item, 3)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="4" @onchange="(e) => SetScore(item, 4)">
+            </td>
+        </tr>
+        }
+
+        <tr>
+            <th class="text-center" colspan="1">
+                <strong>Subtotal</strong>
+            </th>
+            <th class="text-start" colspan="7">@GetTotalScore(qualidadeItens)</th>
+        </tr>
+        <tr>
+            <th class="text-center">
+                <strong>N) SEGURANÇA, MEIO AMBIENTE E SAÚDE / RESPONSABILIDADE SOCIAL</strong>
+            </th>
+            <th class="text-center"></th>
+            <th class="text-center">N/A</th>
+            <th class="text-center">0</th>
+            <th class="text-center">1</th>
+            <th class="text-center">2</th>
+            <th class="text-center">3</th>
+            <th class="text-center">4</th>
+        </tr>
+        @foreach (var item in responsabilidadeSocialItens)
+        {
+        <tr>
+            <td class="text-center">@item.Number</td>
+            <td>@item.Description</td>
+
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="1" @onchange="(e) => SetScore(item, 1)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="2" @onchange="(e) => SetScore(item, 2)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="3" @onchange="(e) => SetScore(item, 3)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="4" @onchange="(e) => SetScore(item, 4)">
+            </td>
+        </tr>
+        }
+
+        <tr>
+            <th class="text-center" colspan="1">
+                <strong>Subtotal</strong>
+            </th>
+            <th class="text-start" colspan="7">@GetTotalScore(responsabilidadeSocialItens)</th>
+        </tr>
+        <tr>
+            <th class="text-center">
+                <strong>O) TECNOLOGIA</strong>
+            </th>
+            <th class="text-center"></th>
+            <th class="text-center">N/A</th>
+            <th class="text-center">0</th>
+            <th class="text-center">1</th>
+            <th class="text-center">2</th>
+            <th class="text-center">3</th>
+            <th class="text-center">4</th>
+        </tr>
+        @foreach (var item in comunicacaoItens)
+        {
+        <tr>
+            <td class="text-center">@item.Number</td>
+            <td>@item.Description</td>
+
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="0" @onchange="(e) => SetScore(item, 0)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="1" @onchange="(e) => SetScore(item, 1)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="2" @onchange="(e) => SetScore(item, 2)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="3" @onchange="(e) => SetScore(item, 3)">
+            </td>
+            <td class="text-center">
+                <input type="radio" name="@($"inlineRadioOptions_{item.Number}")" value="4" @onchange="(e) => SetScore(item, 4)">
+            </td>
+        </tr>
+        }
+
+        <tr>
+            <th class="text-center" colspan="1">
+                <strong>Subtotal</strong>
+            </th>
+            <th class="text-start" colspan="7">@GetTotalScore(comunicacaoItens)</th>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+
+
+</div>
+
+@code {
+    private string setor;
+    private DateTime data = DateTime.Now;
+    
+    <!-- Gestão estratégica -->
+    
+    private List<AuditableItem> planejamentoItens = new List<AuditableItem>();
+    private List<AuditableItem> financasItens = new List<AuditableItem>();
+    private List<AuditableItem> administrativoItens = new List<AuditableItem>();
+    private List<AuditableItem> recursosHumanosItens = new List<AuditableItem>();
+    private List<AuditableItem> liderancaItens = new List<AuditableItem>();
+    
+    <!-- Gestão mercadológica -->
+    
+    private List<AuditableItem> produtosEServicosItens = new List<AuditableItem>();
+    private List<AuditableItem> comercializacaoItens = new List<AuditableItem>();
+    private List<AuditableItem> informacaoItens = new List<AuditableItem>();
+    private List<AuditableItem> comunicacaoItens = new List<AuditableItem>();
+    private List<AuditableItem> logisticaEDistribuicaoItens = new List<AuditableItem>();
+    
+    <!-- Gestão de produção -->
+    
+    private List<AuditableItem> processoProdutivoItens = new List<AuditableItem>();
+    private List<AuditableItem> qualidadeItens = new List<AuditableItem>();
+    private List<AuditableItem> responsabilidadeSocialItens = new List<AuditableItem>();
+    private List<AuditableItem> tecnologiaItens = new List<AuditableItem>();
+    
+    
+
+    private int TotalScore =>
+        GetTotalScore(planejamentoItens) +
+        GetTotalScore(financasItens) +
+        GetTotalScore(administrativoItens) +
+        GetTotalScore(recursosHumanosItens) +
+        GetTotalScore(liderancaItens)+ 
+        
+        GetTotalScore(produtosEServicosItens)+
+        GetTotalScore(comercializacaoItens)+
+        GetTotalScore(informacaoItens)+
+        GetTotalScore(comunicacaoItens)+
+        GetTotalScore(logisticaEDistribuicaoItens)+
+    
+        GetTotalScore(processoProdutivoItens)+
+        GetTotalScore(qualidadeItens)+
+        GetTotalScore(responsabilidadeSocialItens)+
+        GetTotalScore(tecnologiaItens);
+    
+    
+
+    private const int MaxPoints = 75;
+
+    protected override void OnInitialized()
+    {
+        
+        <!-- Gestão estratégica -->
+        
+        planejamentoItens = new List<AuditableItem>
+        {
+            new AuditableItem { Number = "A.1", Description = "Adota metas e /ou indicadores para gerenciar o seu negócio.", Score = null },
+            new AuditableItem { Number = "A.2", Description = "Efetua planejamento estratégico sistematicamente (projetos, metas e plano de ação).", Score = null },
+            new AuditableItem { Number = "A.3", Description = "Avalia o seu ambiente de negócios e adota estratégias para melhorar resultados.", Score = null }
+        };
+        financasItens = new List<AuditableItem>
+        {
+            new AuditableItem { Number = "B.1", Description = "Possui controles financeiros (contas a receber / pagar, custos, faturamento, fluxo de caixa, etc. Conhece o ponto de equilíbrio.", Score = null },
+            new AuditableItem { Number = "B.2", Description = "Possui demonstrativo de Resultados do Exercício Mensal (receitas, despesas e resultado líquido).", Score = null },
+            new AuditableItem { Number = "B.3", Description = "Utiliza técnicas adequadas de cálculo de custos e formação do preço de venda por produto/serviço.", Score = null }
+        };
+        administrativoItens = new List<AuditableItem>
+        {
+            new AuditableItem { Number = "C.1", Description = "Tem definido o seu fluxo operacional, controles e procedimentos, processos de entrada - saída de materiais.", Score = null },
+            new AuditableItem { Number = "C.2", Description = "Adota parcerias visando á otimização de seus processos principais e de apoio.", Score = null },
+            new AuditableItem { Number = "C.3", Description = "Os controles gerenciais garantem a administração dos processos através de um enfoque preventivo.", Score = null },
+            new AuditableItem { Number = "C.4", Description = "Tem definido a missão, visão e valores", Score = null },
+            new AuditableItem { Number = "C.3", Description = "Tem cronograma funcional implementado.", Score = null },
+            new AuditableItem { Number = "C.3", Description = "Tem código de conduta e ética.", Score = null }
+        };
+        recursosHumanosItens = new List<AuditableItem>
+        {
+            new AuditableItem { Number = "D.1", Description = "Investe em capacitação de pessoal de acordo com as necessidades das áreas.", Score = null },
+            new AuditableItem { Number = "D.2", Description = "Todos conhecem suas funções e responsabilidades e estão estabelecidos os perfis e a qualificação necessária.", Score = null },
+            new AuditableItem { Number = "D.3", Description = "Possui avaliação que permite ás pessoas saberem o seu desempenho e concede benefícios por merecimento (Plano de carreira).", Score = null }
+        };
+        liderancaItens = new List<AuditableItem>
+        {
+            new AuditableItem { Number = "E.1", Description = "O tempo de dedicação e comprometimento dos sócios é adequado ao desenvolvimento da empresa.", Score = null },
+            new AuditableItem { Number = "E.2", Description = "Participam de capacitação profissional (cursos, seminários, viagens de estudo).", Score = null },
+            new AuditableItem { Number = "E.3", Description = "Existe perfil definido para escolher e capacitar os líderes.", Score = null },
+            new AuditableItem { Number = "E.4", Description = "Existe plano de reuniões de divulgação de metas/indicadores/objetivos.", Score = null },
+            new AuditableItem { Number = "E.5", Description = "Existe um programa para desenvolver lideranças em diferentes níveis hierárquicos da empresa.", Score = null }
+        };
+        
+        <!-- Gestão mercadológica -->
+        
+        produtosEServicosItens = new List<AuditableItem>
+        {
+            new AuditableItem { Number = "F.1", Description = "Existe um programa de desenvolvimento e aperfeiçoamento dos produtos / serviços na empresa.", Score = null },
+            new AuditableItem { Number = "F.2", Description = "Desenvolve novos produtos / serviços com foco na amplicação de mercado.", Score = null }
+        };
+        comercializacaoItens = new List<AuditableItem>
+        {
+            new AuditableItem { Number = "G.1", Description = "Trabalha com metas individuais e globais de vendas, margem de contribuição e rentabilidade.", Score = null },
+            new AuditableItem { Number = "G.2", Description = "Treina e motiva seus vendedores através de seminários, encontros, lançamentos e programas de premiação.", Score = null },
+            new AuditableItem { Number = "G.3", Description = "Existe um planejamento comercial junto ao marketing e produção, objetivando maximizar os resultados.", Score = null }
+        };
+        informacaoItens = new List<AuditableItem>
+        {
+            new AuditableItem { Number = "H.1", Description = "Efetua periodicamente pesquisas junto a seus clientes (percepções, preferências, necessidades e expectativas.", Score = null },
+            new AuditableItem { Number = "H.2", Description = "Acompanha periodicamente a concorrência e as tendências do setor (acompanhamento de índices / metas.", Score = null },
+            new AuditableItem { Number = "H.3", Description = "Existe classificação de clientes e fornecedores por categoria, região, etc.", Score = null }
+        };
+        comunicacaoItens = new List<AuditableItem>
+        {
+            new AuditableItem { Number = "I.1", Description = "Utiliza meios adequados com os clientes através da comunicação dirigida.", Score = null },
+            new AuditableItem { Number = "I.2", Description = "A imagem do material de expediente, embalagens e peças de divulgação traduz o conceito e da empresa.", Score = null },
+            new AuditableItem { Number = "I.3", Description = "Possuem comunicação interna divulgando seu planejamento, metas, resultados e motivando os colaboradores.", Score = null }
+        };
+        logisticaEDistribuicaoItens = new List<AuditableItem>
+        {
+            new AuditableItem { Number = "J.1", Description = "O layout e o espaço físico estão adequados, favorecendo a produtividade e acesso aos produtos.", Score = null },
+            new AuditableItem { Number = "J.2", Description = "Possui boa logística de localização, suprimentos, distribuição e pontos de venda adequados.", Score = null },
+            new AuditableItem { Number = "J.3", Description = "O sistema de distribuição dos produtos atende ás necessidades da empresa.", Score = null },
+            new AuditableItem { Number = "J.4", Description = "Possui gestão de estoques (ponto pedido, fifo, inventário rotativo, etc.", Score = null }
+        };
+        
+        <!-- Gestão de produção -->
+        
+        processoProdutivoItens = new List<AuditableItem>
+        {
+            new AuditableItem { Number = "L.1", Description = "A empresa está organizada em termos de processos, fluxos, limpeza, almoxarifados, etc.", Score = null },
+            new AuditableItem { Number = "L.2", Description = "Utiliza instrumentos de planejamento e controle da produção (retrabalho, desperdício, capacidade ociosa, etc).", Score = null }
+        };
+        qualidadeItens = new List<AuditableItem>
+        {
+            new AuditableItem { Number = "M.1", Description = "Existe um sistema de indicadores de qualidade e produtividade para gerenciamento e avaliação de desempenho.", Score = null },
+            new AuditableItem { Number = "M.2", Description = "Realiza análise crítica de processos a respeito de prazos de entrega, qualidade, atendimento e custos.", Score = null },
+            new AuditableItem { Number = "M.3", Description = "Possui certificação NBR ISO.", Score = null }
+        };
+        responsabilidadeSocialItens = new List<AuditableItem>
+        {
+            new AuditableItem { Number = "N.1", Description = "Existem políticas e/ou diretrizes relativo á Segurança, meio ambiente e Saúde.", Score = null },
+            new AuditableItem { Number = "N.2", Description = "A empresa possui Programa de Prevenção de Riscos Ambientais - PPRA e o Programa de Controle Médico e Saúde Ocupacional - PCMSO.", Score = null },
+            new AuditableItem { Number = "N.3", Description = "A empresa desenvolve ações que demonstrem o comprometimento da empresa com os aspectos de responsabilidade social.", Score = null }
+        };
+        tecnologiaItens = new List<AuditableItem>
+        {
+            new AuditableItem { Number = "O.1", Description = "O grau de automação e informatização é adequado ás necessidades da empresa.", Score = null },
+            new AuditableItem { Number = "O.2", Description = "A empresa utiliza a internet como canal de compras e/ou vendas dos seus serviços ou produtos.", Score = null },
+            new AuditableItem { Number = "O.3", Description = "A empresa utiliza a internet como canal de divulgação dos seus serviços ou produtos.", Score = null }
+        };
+        
+    }
+
+    private void SetScore(AuditableItem item, int? score)
+    {
+        item.Score = score;
+        StateHasChanged();
+    }
+
+    private int GetTotalScore(List<AuditableItem> items)
+    {
+        return items.Sum(i => i.Score ?? 0);
+    }
+
+    private double AchievedPercentage =>
+        TotalScore > 0 ? (TotalScore / (double)MaxPoints) * 100 : 0;
+
+    private void SubmitAuditoria()
+    {
+        Console.WriteLine("Auditoria enviada");
+    }
+
+    public class AuditableItem
+    {
+        public string Number { get; set; }
+        public string Description { get; set; }
+        public int? Score { get; set; }
+    }
+
+
+}
