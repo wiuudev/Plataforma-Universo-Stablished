@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rzdoc\\Documents\\GitHub\\Plataforma-Universo-Stablished\\ynex.csproj": {}
+    "c:\\Users\\rzdoc\\Documents\\GitHub\\Plataforma-Universo-Stablished\\ynex.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rzdoc\\Documents\\GitHub\\Plataforma-Universo-Stablished\\ynex.csproj": {
+    "c:\\Users\\rzdoc\\Documents\\GitHub\\Plataforma-Universo-Stablished\\ynex.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rzdoc\\Documents\\GitHub\\Plataforma-Universo-Stablished\\ynex.csproj",
+        "projectUniqueName": "c:\\Users\\rzdoc\\Documents\\GitHub\\Plataforma-Universo-Stablished\\ynex.csproj",
         "projectName": "ynex",
-        "projectPath": "C:\\Users\\rzdoc\\Documents\\GitHub\\Plataforma-Universo-Stablished\\ynex.csproj",
+        "projectPath": "c:\\Users\\rzdoc\\Documents\\GitHub\\Plataforma-Universo-Stablished\\ynex.csproj",
         "packagesPath": "C:\\Users\\rzdoc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rzdoc\\Documents\\GitHub\\Plataforma-Universo-Stablished\\obj\\",
+        "outputPath": "c:\\Users\\rzdoc\\Documents\\GitHub\\Plataforma-Universo-Stablished\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rzdoc\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,7 +37,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -147,7 +148,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\rzdoc\\.dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

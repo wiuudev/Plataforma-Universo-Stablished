@@ -1,0 +1,110 @@
+﻿@page "/newdashboard"
+
+<div class="container-fluid text-white p-4 rounded">
+    <!-- Resumo Section -->
+    <div class="card mb-4 border-0 bg-white p-4 rounded">
+        <h5 class="card-title">Resumo</h5>
+        <div class="row">
+            <!-- Período de Visualização -->
+            <div class="col-md-3">
+                <label class="form-label">Período de Visualização</label>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="periodoVisualizacao" data-bs-toggle="dropdown" aria-expanded="false">
+                        Esse mês
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="periodoVisualizacao">
+                        <li><a class="dropdown-item" href="#">Esse mês</a></li>
+                        <li><a class="dropdown-item" href="#">Mês passado</a></li>
+                        <li><a class="dropdown-item" href="#">Último ano</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Média da Semana -->
+            <div class="col-md-3">
+                <label class="form-label">Média da Semana</label>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="mediaSemana" data-bs-toggle="dropdown" aria-expanded="false">
+                        Última semana
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="mediaSemana">
+                        <li><a class="dropdown-item" href="#">Todas</a></li>
+                        <li><a class="dropdown-item" href="#">Última semana</a></li>
+                        <li><a class="dropdown-item" href="#">Semana atual</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Média do Mês -->
+            <div class="col-md-3">
+                <label class="form-label">Média do Mês</label>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="mediaMes" data-bs-toggle="dropdown" aria-expanded="false">
+                        Mês atual
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="mediaMes">
+                        <li><a class="dropdown-item" href="#">Qualquer</a></li>
+                        <li><a class="dropdown-item" href="#">Mês atual</a></li>
+                        <li><a class="dropdown-item" href="#">Mês anterior</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Média do Ano -->
+            <div class="col-md-3">
+                <label class="form-label">Média do Ano</label>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="mediaAno" data-bs-toggle="dropdown" aria-expanded="false">
+                        Ano atual
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="mediaAno">
+                        <li><a class="dropdown-item" href="#">Qualquer</a></li>
+                        <li><a class="dropdown-item" href="#">Ano atual</a></li>
+                        <li><a class="dropdown-item" href="#">Ano anterior</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Metrics Row in a New Card -->
+    <div class="card mb-4 border-0 bg-transparent">
+        <div class="row text-center align-items-stretch">
+            <div class="col-md-2">
+                <div class="card metric-card bg-white text-dark p-3 mb-3">
+                    <h6>Faturamento</h6>
+                    <p>R$ 379.971,80</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card metric-card bg-white text-dark p-3 mb-3">
+                    <h6>Despesas</h6>
+                    <p>R$ 278.965,42</p>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card metric-card bg-white text-dark p-3 mb-3">
+                    <h6>Lucro Bruto</h6>
+                    <p class="text-success">R$ 120.000,23</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card metric-card bg-white text-dark p-3 mb-3">
+                    <h6>Lucro Líquido</h6>
+                    <p class="text-success">R$ 101.006,38</p>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card metric-card bg-white text-dark p-3 mb-3">
+                    <h6>Margem</h6>
+                    <p class="text-success">26.6%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

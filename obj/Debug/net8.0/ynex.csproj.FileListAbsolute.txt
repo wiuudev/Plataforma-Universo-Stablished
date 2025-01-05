@@ -238,3 +238,6 @@ C:\Users\rzdoc\Documents\GitHub\Plataforma-Universo-Stablished\obj\Debug\net8.0\
 C:\Users\rzdoc\Documents\GitHub\Plataforma-Universo-Stablished\obj\Debug\net8.0\ynex.pdb
 C:\Users\rzdoc\Documents\GitHub\Plataforma-Universo-Stablished\obj\Debug\net8.0\ynex.genruntimeconfig.cache
 C:\Users\rzdoc\Documents\GitHub\Plataforma-Universo-Stablished\obj\Debug\net8.0\ref\ynex.dll
+c:\Users\rzdoc\Documents\GitHub\Plataforma-Universo-Stablished\bin\Debug\net8.0\ynex.staticwebassets.endpoints.json
+c:\Users\rzdoc\Documents\GitHub\Plataforma-Universo-Stablished\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+c:\Users\rzdoc\Documents\GitHub\Plataforma-Universo-Stablished\obj\Debug\net8.0\staticwebassets\msbuild.ynex.Microsoft.AspNetCore.StaticWebAssetEndpoints.props

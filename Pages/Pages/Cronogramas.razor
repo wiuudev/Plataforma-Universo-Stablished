@@ -1,0 +1,38 @@
+﻿@page "/cronogramas"
+
+<div class="container-fluid">
+
+<h1 class="text-center">Cronogramas / Ações</h1>
+    <div class="form-group">
+        @foreach (var field in InputFields)
+        {
+        <div class="mb-3">
+            <label class="form-label">@field.Title</label>
+            <div class="d-flex align-items-center">
+                <input type="checkbox" class="form-check-input me-2" @bind="field.IsEnabled" />
+                <input type="text" class="form-control" disabled="@(!field.IsEnabled)"
+                       placeholder="Digite algo..." @bind="field.Value" style="flex: 1;" />
+            </div>
+        </div>
+        }
+    </div>
+</div>
+
+@code {
+    // Classe representando um campo de entrada com título
+    public class InputField
+    {
+        public string Title { get; set; } = string.Empty;
+        public bool IsEnabled { get; set; }
+        public string Value { get; set; } = string.Empty;
+    }
+
+    // Lista de campos de entrada com títulos pré-definidos
+    private List<InputField> InputFields { get; set; } = new List<InputField>
+    {
+        new InputField { Title = "Ação 1"},
+        new InputField { Title = "Ação 2" },
+        new InputField { Title = "Ação 3" },
+        new InputField { Title = "Ação 4" }
+    };
+}

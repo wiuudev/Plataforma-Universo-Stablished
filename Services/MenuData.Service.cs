@@ -7,7 +7,7 @@ public class MenuDataService
         ),
         new MainMenuItems(
             type: "link",
-            path: "/home",
+            path: "/apex-bar-charts",
             title: "Dashboard",
             icon: "bx bx-home",
             badgeClass: "bg-warning-transparent",
@@ -41,6 +41,15 @@ public class MenuDataService
                     path: "/diagnosticogerencial",
                     type: "link",
                     title: "Diagnóstico Gerencial",
+                    selected: false,
+                    active: false,
+                    dirChange: false
+                ),
+                
+                new MainMenuItems (
+                    path: "/cronogramas",
+                    type: "link",
+                    title: "Cronogramas e Ações",
                     selected: false,
                     active: false,
                     dirChange: false
