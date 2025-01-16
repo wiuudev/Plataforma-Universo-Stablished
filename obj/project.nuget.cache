@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gm8iIB65tJ8=",
+  "dgSpecHash": "1ykAUr8Y5hI=",
   "success": true,
-  "projectFilePath": "c:\\Users\\rzdoc\\Documents\\GitHub\\Plataforma-Universo-Stablished\\ynex.csproj",
+  "projectFilePath": "C:\\Users\\rzdoc\\Documents\\GitHub\\Plataforma-Universo-Stablished\\ynex.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rzdoc\\.nuget\\packages\\ardalis.smartenum\\8.0.0\\ardalis.smartenum.8.0.0.nupkg.sha512",
     "C:\\Users\\rzdoc\\.nuget\\packages\\ardalis.smartenum.systemtextjson\\8.0.0\\ardalis.smartenum.systemtextjson.8.0.0.nupkg.sha512",
