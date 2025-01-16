@@ -1,0 +1,238 @@
+﻿@page "/dashboard-charts"
+@using ApexCharts
+@using System.Collections.Generic
+
+<div class="container-fluid">
+    <h1></h1>
+    <div class="card custom-card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="btn-group w-100">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            Indústria
+                        </button>
+                        <ul class="dropdown-menu" style="width: 100%; left: 0; right: 0; box-sizing: border-box;">
+                            <li><a class="dropdown-item" href="javascript:void(0);">Metalúrgica</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Padaria</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Têxteis</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Moveleira</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="btn-group w-100">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            Comércio
+                        </button>
+                        <ul class="dropdown-menu" style="width: 100%; left: 0; right: 0; box-sizing: border-box;">
+                            <li><a class="dropdown-item" href="javascript:void(0);">Supermercados</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Lojas</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Farmácias</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Clínicas</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Restaurantes</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Relojoarias</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Clínicas</a></li>
+                            Veículos
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="btn-group w-100">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            Serviço
+                        </button>
+                        <ul class="dropdown-menu" style="width: 100%; left: 0; right: 0; box-sizing: border-box;">
+                            <li><a class="dropdown-item" href="javascript:void(0);">Construção Civil</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Oficinas</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Salão de Beleza</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Eventos</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Petshops</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="btn-group w-100">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            Gestão Pública
+                        </button>
+                        <ul class="dropdown-menu" style="width: 100%; left: 0; right: 0; box-sizing: border-box;">
+                            <li><a class="dropdown-item" href="javascript:void(0);">Prefeitura</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Secretaria Saúde</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Gestão Hospitalar</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="btn-group w-100">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            Agronegócio
+                        </button>
+                        <ul class="dropdown-menu" style="width: 100%; left: 0; right: 0; box-sizing: border-box;">
+                            <li><a class="dropdown-item" href="javascript:void(0);">Agropecuária</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Floriculturas</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Criação de Suínos</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Produção Leiteira</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);">Agroindústria</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="btn-group w-100">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            Imobiliária
+                        </button>
+                        <ul class="dropdown-menu" style="width: 100%; left: 0; right: 0; box-sizing: border-box;">
+                            <li><a class="dropdown-item" href="javascript:void(0);">Venda e Locação</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <!-- Start::row-1 chart-->
+    <div class="row">
+        <div class="col-xl-6">
+            <div class="card custom-card">
+                <div class="card-header">
+                    <div class="card-title">Basic Bar Chart</div>
+                </div>
+                <div class="card-body">
+                    <div id="bar-basic">
+                        <ApexChart TItem="Barbasicchart" Height="320" Options="BasicBarChartOptions">
+                            <ApexPointSeries TItem="Barbasicchart" Items="Barbasiccharts" Color="var(--primary-color)"
+                                             Name="Country" SeriesType="SeriesType.Bar" XValue="@(e => e.Country)"
+                                             YAggregate="@(e => e.Sum(e => e.GrossValue))"/>
+                        </ApexChart>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+
+// Basic Bar Chart Start //
+    private List<Barbasicchart> Barbasiccharts { get; set; } = BarbasicData.GetBarbasiccharts();
+    private ApexChartOptions<Barbasicchart> BasicBarChartOptions { get; set; } = new();
+
+    public class Barbasicchart
+    {
+        public string? Country { get; set; }
+        public decimal GrossValue { get; set; }
+    };
+
+    public static class BarbasicData
+    {
+        public static List<Barbasicchart> GetBarbasiccharts()
+        {
+            List<Barbasicchart> Barbasiccharts = new()
+            {
+                new Barbasicchart { Country = "South Korea", GrossValue = 400 },
+                new Barbasicchart { Country = "Canada", GrossValue = 430 },
+                new Barbasicchart { Country = "United Kingdom", GrossValue = 448 },
+                new Barbasicchart { Country = "Netherlands", GrossValue = 470 },
+                new Barbasicchart { Country = "Italy", GrossValue = 540 },
+                new Barbasicchart { Country = "France", GrossValue = 580 },
+                new Barbasicchart { Country = "Japan", GrossValue = 690 },
+                new Barbasicchart { Country = "United States", GrossValue = 1100 },
+                new Barbasicchart { Country = "China", GrossValue = 1200 },
+                new Barbasicchart { Country = "Germany", GrossValue = 1380 }
+            };
+
+            return Barbasiccharts;
+        }
+    }
+//  Basic Bar Chart End //
+
+
+    protected override void OnInitialized()
+    {
+        BasicBarChartOptions = new ApexChartOptions<Barbasicchart>
+        {
+            Chart = new Chart
+            {
+                Toolbar = new Toolbar
+                {
+                    Tools = new Tools { Zoom = false, Zoomin = false, Zoomout = false, Pan = false, Reset = false, Download = true }
+                }
+            },
+            PlotOptions = new PlotOptions
+            {
+                Bar = new PlotOptionsBar
+                {
+                    BorderRadius = 4,
+                    Horizontal = false
+                }
+            },
+            Title = new Title
+            {
+                Style = new TitleStyle
+                {
+                    FontSize = "13px",
+                    FontWeight = "bold",
+                    Color = "#8c9097"
+                }
+            },
+            Grid = new Grid
+            {
+                BorderColor = "#f2f5f7"
+            },
+            DataLabels = new DataLabels
+            {
+                Enabled = false
+            },
+            Colors = new Color(new List<string> { "var(--primary-color)" }),
+            Stroke = new Stroke
+            {
+                Curve = Curve.Straight,
+                Width = 0
+            },
+            Xaxis = new XAxis
+            {
+                Labels = new XAxisLabels
+                {
+                    Show = true,
+                    Style = new AxisLabelStyle
+                    {
+                        Colors = "#8c9097",
+                        FontSize = "11px",
+                        FontWeight = 600,
+                        CssClass = "apexcharts-xaxis-label"
+                    }
+                }
+            },
+            Yaxis = new List<YAxis>()
+            {
+                new() // Define the first YAxis object
+                {
+                    Labels = new YAxisLabels
+                    {
+                        Show = true,
+                        Style = new AxisLabelStyle
+                        {
+                            Colors = "#8c9097",
+                            FontSize = "11px",
+                            FontWeight = 600,
+                            CssClass = "apexcharts-yaxis-label"
+                        }
+                    },
+                    Min = 0,
+                    Max = 1500,
+                    StepSize = 300
+                }
+            }
+        };
+    }
+
+}
