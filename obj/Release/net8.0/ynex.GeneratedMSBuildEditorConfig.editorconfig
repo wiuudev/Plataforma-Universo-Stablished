@@ -312,16 +312,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhcnRzXENoYXJ0anMtY2hhcnRzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rzdoc/Documents/GitHub/Plataforma-Universo-Stablished/Pages/Charts/dashboard-charts.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhcnRzXGRhc2hib2FyZC1jaGFydHMucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/rzdoc/Documents/GitHub/Plataforma-Universo-Stablished/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/rzdoc/Documents/GitHub/Plataforma-Universo-Stablished/Pages/Dashboards/dashboardhome.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkc1xkYXNoYm9hcmRob21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/rzdoc/Documents/GitHub/Plataforma-Universo-Stablished/Pages/Dashboards/Index10.razor]
@@ -514,6 +506,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/rzdoc/Documents/GitHub/Plataforma-Universo-Stablished/Pages/Pages/Cronogramas.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFnZXNcQ3Jvbm9ncmFtYXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rzdoc/Documents/GitHub/Plataforma-Universo-Stablished/Pages/Pages/Dashboard-charts.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFnZXNcRGFzaGJvYXJkLWNoYXJ0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/rzdoc/Documents/GitHub/Plataforma-Universo-Stablished/Pages/Pages/DiagnosticManager.razor]
