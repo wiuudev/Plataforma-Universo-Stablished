@@ -13,26 +13,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout o código
+      # 1. Checkout o código do repositório
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Configuração do .NET
+      # 2. Configuração do .NET (versão 8.0)
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '8.0.x'
 
-      # Publicação do projeto
+      # 3. Publicar o projeto
       - name: Publish with dotnet
         run: dotnet publish --configuration Release --output bin/Release/net8.0/publish
 
-      # Atualização da tag <base> no index.html
-      - name: Change base-tag in index.html
+      # 4. Alterar a tag <base> no arquivo index.html, caso exista
+      - name: Update base-tag for GitHub Pages
         run: |
-          sed -i 's|<base href="/" />|<base href="/ynex/" />|g' bin/Release/net8.0/publish/wwwroot/index.html
+          if [ -f bin/Release/net8.0/publish/wwwroot/index.html ]; then
+            sed -i 's|<base href="/" />|<base href="/ynex/" />|g' bin/Release/net8.0/publish/wwwroot/index.html
+          fi
 
-      # Publicação no branch gh-pages
+      # 5. Publicar para o branch gh-pages
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
