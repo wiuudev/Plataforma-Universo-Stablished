@@ -20,10 +20,10 @@ jobs:
         with:
           dotnet-version: '8.0.x'
       - name: Publish with dotnet
-        run: dotnet publish --configuration Release --output build
+        run: dotnet publish --configuration Release build
       # changes the base-tag in index.html from '/' to 'ynex' to match GitHub Pages repository subdirectory
       - name: Change base-tag in index.html from / to ynex
-        run: sed -i 's/<base href="\/" \/>/<base href="\/ynex\/" \/>/g' build/wwwroot/index.html
+        run: sed -i 's/<base href="\/" \/>/<base href="\/ynex\/" \/>/g' wwwroot/index.html
       - name: Commit wwwroot to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
