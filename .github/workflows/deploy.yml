@@ -20,7 +20,7 @@ jobs:
       with:
         dotnet-version: '8.0.x'
     - name: Publish with dotnet
-      run: dotnet publish --configuration -c Release -o publish
+      run: dotnet publish ynex.sln -c Release
     # changes the base-tag in index.html from '/' to 'ynex' to match GitHub Pages repository subdirectory
     - name: Change base-tag in index.html from / to ynex
       run: sed -i 's/<base href="\/" \/>/<base href="\/ynex\/" \/>/g' ./wwwroot/index.html
